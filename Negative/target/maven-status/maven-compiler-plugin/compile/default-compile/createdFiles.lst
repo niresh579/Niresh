@@ -1,0 +1,16 @@
+Base\BaseTest.class
+pom\RegistrationPOM.class
+pom\SearchPom.class
+pom\WcsmPPPOM.class
+pom\StageRegistrationPom.class
+pom\WcsmPIPom.class
+pom\PrivacySettingPom.class
+pom\WcsmPOM.class
+pom\NegativePaymentPOM.class
+pom\StagePPwithMatchesPom.class
+Base\BaseTest$1.class
+pom\StageRegistAllFieldPOM.class
+pom\EditPPPOM.class
+pom\NegativeEditPiPOM.class
+pom\PasswordCheckPOM.class
+pom\LoginLogoutPOM.class

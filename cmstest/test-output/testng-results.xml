@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="60145" started-at="2020-03-19T09:48:28Z" finished-at="2020-03-19T09:49:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="60145" started-at="2020-03-19T09:48:28Z" finished-at="2020-03-19T09:49:28Z">
+      <class name="cms.cmstest.RemoveBlockedIgnoredProfile">
+        <test-method status="PASS" signature="setUp1()[pri:0, instance:cms.cmstest.RemoveBlockedIgnoredProfile@10bdf5e5]" name="setUp1" is-config="true" duration-ms="2780" started-at="2020-03-19T15:18:28Z" finished-at="2020-03-19T15:18:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp1 -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:cms.cmstest.RemoveBlockedIgnoredProfile@10bdf5e5]" name="testUntitled" duration-ms="57348" started-at="2020-03-19T15:18:31Z" finished-at="2020-03-19T15:19:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- cms.cmstest.RemoveBlockedIgnoredProfile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

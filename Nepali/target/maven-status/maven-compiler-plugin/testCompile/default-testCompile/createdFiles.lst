@@ -1,0 +1,16 @@
+logic\LoginLogout.class
+logic\PakistaniRegistration.class
+logic\ProfilePreview.class
+logic\StageRegistAllField.class
+logic\PasswordCheck.class
+logic\VerifyAgepp.class
+logic\NegativeEditPi.class
+logic\Matches.class
+logic\Search.class
+logic\BlockedMultipleProfileMatches.class
+logic\NegativePaymentDiamond.class
+logic\CommunicationSettings.class
+logic\SendInterestMatches.class
+logic\NegativePaymentPlatinum.class
+logic\EditPP.class
+logic\NegativePaymentGold.class

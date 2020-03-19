@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 19.056 sec <<< FAILURE! - in TestSuite
+test(logic.StagingPwaRegistration)  Time elapsed: 14.112 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at logic.StagingPwaRegistration.test(StagingPwaRegistration.java:66)
+

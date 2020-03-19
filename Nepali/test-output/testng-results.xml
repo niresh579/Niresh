@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="321422" started-at="2020-03-10T11:26:50Z" finished-at="2020-03-10T11:32:11Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="321422" started-at="2020-03-10T11:26:50Z" finished-at="2020-03-10T11:32:11Z">
+      <class name="logic.PakistaniRegistration">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:logic.PakistaniRegistration@31610302]" name="htmlReport" is-config="true" duration-ms="203" started-at="2020-03-10T11:26:50Z" finished-at="2020-03-10T11:26:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlReport -->
+        <test-method status="PASS" signature="launch()[pri:0, instance:logic.PakistaniRegistration@31610302]" name="launch" is-config="true" duration-ms="3182" started-at="2020-03-10T11:26:50Z" finished-at="2020-03-10T11:26:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="test()[pri:0, instance:logic.PakistaniRegistration@31610302]" name="test" duration-ms="309198" started-at="2020-03-10T11:26:53Z" finished-at="2020-03-10T11:32:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="mailReport(org.testng.ITestResult)[pri:0, instance:logic.PakistaniRegistration@31610302]" name="mailReport" is-config="true" duration-ms="9013" started-at="2020-03-10T11:32:02Z" finished-at="2020-03-10T11:32:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=PakistaniRegistration.test()[pri:0, instance:logic.PakistaniRegistration@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailReport -->
+      </class> <!-- logic.PakistaniRegistration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
