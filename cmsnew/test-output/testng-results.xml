@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59087" started-at="2020-02-01T10:38:56Z" finished-at="2020-02-01T10:39:55Z">
+  <suite name="Default suite" duration-ms="86366" started-at="2020-03-21T06:07:14Z" finished-at="2020-03-21T06:08:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59087" started-at="2020-02-01T10:38:56Z" finished-at="2020-02-01T10:39:55Z">
-      <class name="logic.Pcs">
-        <test-method status="PASS" signature="setUp1()[pri:0, instance:logic.Pcs@4566e5bd]" name="setUp1" is-config="true" duration-ms="3284" started-at="2020-02-01T10:38:56Z" finished-at="2020-02-01T10:38:59Z">
+    <test name="Default test" duration-ms="86366" started-at="2020-03-21T06:07:14Z" finished-at="2020-03-21T06:08:40Z">
+      <class name="logic.AgeValidationinSearch">
+        <test-method status="PASS" signature="setUp1()[pri:0, instance:logic.AgeValidationinSearch@3f49dace]" name="setUp1" is-config="true" duration-ms="4466" started-at="2020-03-21T06:07:14Z" finished-at="2020-03-21T06:07:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp1 -->
-        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:logic.Pcs@4566e5bd]" name="testUntitled" duration-ms="55698" started-at="2020-02-01T10:38:59Z" finished-at="2020-02-01T10:39:55Z">
+        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:logic.AgeValidationinSearch@3f49dace]" name="testUntitled" duration-ms="81851" started-at="2020-03-21T06:07:18Z" finished-at="2020-03-21T06:08:40Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[contains(text(),'Add')])[1]"}
-  (Session info: chrome=79.0.3945.130)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='id-name'])[2]"}
+  (Session info: chrome=80.0.3987.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2EHDPTI', ip: '192.168.64.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62694}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8056b71c0c324cbc1a3d520f4dee1198
-*** Element info: {Using=xpath, value=(//span[contains(text(),'Add')])[1]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54433}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85dbc2e480e785cc58d48dfcce3eef03
+*** Element info: {Using=xpath, value=(//div[@class='id-name'])[2]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[contains(text(),'Add')])[1]"}
-  (Session info: chrome=79.0.3945.130)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='id-name'])[2]"}
+  (Session info: chrome=80.0.3987.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-2EHDPTI', ip: '192.168.64.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62694}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8056b71c0c324cbc1a3d520f4dee1198
-*** Element info: {Using=xpath, value=(//span[contains(text(),'Add')])[1]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54433}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85dbc2e480e785cc58d48dfcce3eef03
+*** Element info: {Using=xpath, value=(//div[@class='id-name'])[2]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -48,7 +48,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at logic.Pcs.testUntitled(Pcs.java:82)
+at logic.AgeValidationinSearch.testUntitled(AgeValidationinSearch.java:160)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,7 +80,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-      </class> <!-- logic.Pcs -->
+      </class> <!-- logic.AgeValidationinSearch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

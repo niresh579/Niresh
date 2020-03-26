@@ -117,10 +117,10 @@ public class ProfilePreview {
     System.out.println("Height ="+heig);	  	   
     	
     
-    Thread.sleep(4000);
-	WebElement weight=driver.findElement(By.xpath("(//div[contains(text(),'Weight')]//following::div[1])[1]"));
-    String weigh=weight.getText();
-    System.out.println("Weight ="+weigh);	  	   
+//    Thread.sleep(4000);
+//	WebElement weight=driver.findElement(By.xpath("(//div[contains(text(),'Weight')]//following::div[1])[1]"));
+//    String weigh=weight.getText();
+//    System.out.println("Weight ="+weigh);	  	   
     	   
     Thread.sleep(4000);
 	WebElement marital=driver.findElement(By.xpath("(//div[contains(text(),'Marital Status')]//following::div[1])[1]"));
@@ -159,18 +159,18 @@ public class ProfilePreview {
        Thread.sleep(4000);
        driver.findElement(By.xpath("//*[@id='headerTitle']/div/a")).click();
     	   
-       WebElement profilecreated1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Profile created for')]//following::ion-col[1])[1]"));
+       WebElement profilecreated1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Profile Created For')]//following::ion-col[@class='col'])[2]"));
        String profile1=	profilecreated1.getText();
        System.out.println("Profile Created by1 ="+profile1);
    	
        Thread.sleep(4000);
-   	WebElement name1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Name')]//following::ion-col[1])[1]"));
+   	WebElement name1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Name')]//following::ion-col[@class='col'])[2]"));
        String profilename1=	name1.getText();
        System.out.println("Name ="+profilename1);
       
        	   
        Thread.sleep(4000);
-   	WebElement age1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Age')]//following::ion-col[1])[1]"));
+   	WebElement age1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Age')]//following::ion-col[@class='col'])[2]"));
        String profileage1=	age1.getText();
        System.out.println("Age1 ="+profileage1);	 
        String[] split1=profileage1.split("yrs");
@@ -179,46 +179,47 @@ public class ProfilePreview {
        int profilepreviewage=Integer.parseInt(splitage2);
     	   
        Thread.sleep(4000);
-   	WebElement height1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Height')]//following::ion-col[1])[1]"));
+   	WebElement height1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Height')]//following::ion-col[@class='col'])[2]"));
        String heig1=height1.getText();
        System.out.println("Height1 ="+heig1);	  
-       String[] split2=heig1.split("/ 154 cm");
+       String[] split2=heig1.split("/");
       // System.out.println(split2[0]);
        	String heightnew=split2[0].toString().trim();
+       	System.out.println("Height final :"+heightnew);
        	
        
-       Thread.sleep(4000);
-   	WebElement weight1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Weight')]//following::ion-col[1])[1]"));
-       String weigh1=weight1.getText();
-       System.out.println("Weight ="+weigh1);	  	   
+//       Thread.sleep(4000);
+//   	WebElement weight1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Weight')]//following::ion-col[@class='col'])[2]"));
+//       String weigh1=weight1.getText();
+//       System.out.println("Weight ="+weigh1);	  	   
        	   
        Thread.sleep(4000);
-   	WebElement marital1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Marital')]//following::ion-col[1])[1]"));
+   	WebElement marital1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Marital')]//following::ion-col[@class='col'])[2]"));
        String maritalstatus1=marital1.getText();
        System.out.println("Marital Status ="+maritalstatus1);	 	   
        	   
        Thread.sleep(4000);
-   	WebElement star1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Star')]//following::ion-col[1])[1]"));
+   	WebElement star1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Star')]//following::ion-col[@class='col'])[2]"));
        String starown1=star1.getText();
        System.out.println("Star ="+starown1);	   
        	   
        Thread.sleep(4000);	
-   	WebElement raasi1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Raasi')]//following::ion-col[1])[1]"));
+   	WebElement raasi1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Raasi')]//following::ion-col[@class='col'])[2]"));
        String ownraasi1=raasi1.getText();
        System.out.println("Raasi ="+ownraasi1);	      
     	   
        Thread.sleep(4000);
-      	WebElement education1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Education')]//following::ion-col[1])[1]"));
+      	WebElement education1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Education')]//following::ion-col[@class='col'])[2]"));
           String owneducation1=education1.getText();
           System.out.println("Education ="+owneducation1);		   
        	   
           Thread.sleep(4000);
-      	WebElement occupation1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Occupation')]//following::ion-col[1])[1]"));
+      	WebElement occupation1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Occupation')]//following::ion-col[@class='col'])[2]"));
           String ownoccupation1=occupation1.getText();
           System.out.println("Occupation ="+ownoccupation1);		   
        	   
           Thread.sleep(4000);
-      	WebElement income1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Annual')]//following::ion-col[1])[1]"));
+      	WebElement income1=driver.findElement(By.xpath("(//ion-col[contains(text(),'Annual')]//following::ion-col[@class='col'])[2]"));
           String annualincome1=income1.getText();
           System.out.println("Annual Income ="+annualincome1);	   
     	   
@@ -260,14 +261,14 @@ public class ProfilePreview {
 			System.out.println("Height is Not matched");
 		}    
     	   
-          if (weigh.equalsIgnoreCase(weigh1)) {
-        	  System.out.println("Weight is Matched");
-			
-		}
-          
-          else {
-			System.out.println("Weight is Not Matched");
-		}      
+//          if (weigh.equalsIgnoreCase(weigh1)) {
+//        	  System.out.println("Weight is Matched");
+//			
+//		}
+//          
+//          else {
+//			System.out.println("Weight is Not Matched");
+//		}      
     	 
           
           if (maritalstatus.equalsIgnoreCase(maritalstatus1)) {

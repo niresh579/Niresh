@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="77432" started-at="2020-03-26T04:40:41Z" finished-at="2020-03-26T04:41:59Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="77432" started-at="2020-03-26T04:40:41Z" finished-at="2020-03-26T04:41:59Z">
+      <class name="logic.LoginLogout">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:logic.LoginLogout@1bce4f0a]" name="htmlReport" is-config="true" duration-ms="146" started-at="2020-03-26T04:40:41Z" finished-at="2020-03-26T04:40:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlReport -->
+        <test-method status="PASS" signature="setUp1()[pri:0, instance:logic.LoginLogout@1bce4f0a]" name="setUp1" is-config="true" duration-ms="7666" started-at="2020-03-26T04:40:41Z" finished-at="2020-03-26T04:40:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp1 -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:logic.LoginLogout@1bce4f0a]" name="testUntitled" duration-ms="61134" started-at="2020-03-26T04:40:49Z" finished-at="2020-03-26T04:41:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="mailReport(org.testng.ITestResult)[pri:0, instance:logic.LoginLogout@1bce4f0a]" name="mailReport" is-config="true" duration-ms="8615" started-at="2020-03-26T04:41:50Z" finished-at="2020-03-26T04:41:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUntitled status=SUCCESS method=LoginLogout.testUntitled()[pri:0, instance:logic.LoginLogout@1bce4f0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailReport -->
+      </class> <!-- logic.LoginLogout -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+  <suite name="Suite (0)" duration-ms="167032" started-at="2020-03-26T04:41:59Z" finished-at="2020-03-26T04:44:46Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="167032" started-at="2020-03-26T04:41:59Z" finished-at="2020-03-26T04:44:46Z">
+      <class name="logic.NegativePaymentPlatinum">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:logic.NegativePaymentPlatinum@598067a5]" name="htmlReport" is-config="true" duration-ms="6" started-at="2020-03-26T04:41:59Z" finished-at="2020-03-26T04:41:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlReport -->
+        <test-method status="PASS" signature="setUp1()[pri:0, instance:logic.NegativePaymentPlatinum@598067a5]" name="setUp1" is-config="true" duration-ms="5990" started-at="2020-03-26T04:41:59Z" finished-at="2020-03-26T04:42:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp1 -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:logic.NegativePaymentPlatinum@598067a5]" name="testUntitled" duration-ms="140068" started-at="2020-03-26T04:42:05Z" finished-at="2020-03-26T04:44:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="mailReport(org.testng.ITestResult)[pri:0, instance:logic.NegativePaymentPlatinum@598067a5]" name="mailReport" is-config="true" duration-ms="20972" started-at="2020-03-26T04:44:25Z" finished-at="2020-03-26T04:44:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUntitled status=SUCCESS method=NegativePaymentPlatinum.testUntitled()[pri:0, instance:logic.NegativePaymentPlatinum@598067a5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailReport -->
+      </class> <!-- logic.NegativePaymentPlatinum -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite (0) -->
+</testng-results>

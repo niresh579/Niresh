@@ -153,10 +153,10 @@ public class AgeValidationinSearch {
 	
 	  	  
 	Thread.sleep(4000);
-	driver.findElement(By.xpath("	")).click();
+	driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-footer/ion-toolbar/div[2]/ion-grid/ion-row/ion-col[3]")).click();	
 	
 
-	Thread.sleep(4000);
+	Thread.sleep(4000);     
 	WebElement ref1 = driver.findElement(By.xpath("(//div[@class='id-name'])[2]"));
 	String a2=ref1.getText();
 	System.out.println("Name :"+a2);

@@ -121,9 +121,12 @@ public class RemoveBlockedIgnoredProfile extends Base {
 		  Thread.sleep(4000);
 		  driver.findElement(By.xpath("/html/body/ion-app/ion-modal/div/settingpopup/ion-content/div[2]/ion-grid/ion-row/ion-col/ion-list/ion-item[1]")).click();
 		  
+		  
+		  Thread.sleep(4000);
 		  List<WebElement> demo=driver.findElements(By.xpath("//ion-icon[@class='posabsolute right0 icon icon-md']"));
 		  System.out.println("Total number of blocked profiles" +demo.size());
 		  
+		  Thread.sleep(4000);
 		  for (int i = 1; i < demo.size(); i++) {
 			
 			  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-shortlisted/ion-content/div[2]/ion-list/ion-row["+i+"]/ion-grid/ion-row[1]/ion-col[2]/div[3]/ion-row/ion-col/ion-icon"));
@@ -132,7 +135,7 @@ public class RemoveBlockedIgnoredProfile extends Base {
 			  
 			  
 			  Thread.sleep(4000);
-			  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-shortlisted/ion-content/div[2]/ion-list/ion-row/ion-grid/ion-row[1]/ion-col[2]/div[3]/ion-row/ion-col[2]/ion-list/button")).click();
+			  driver.findElement(By.xpath("//button[@class='item item-icon-left item-block item-md']")).click();
 
 		}
 		  

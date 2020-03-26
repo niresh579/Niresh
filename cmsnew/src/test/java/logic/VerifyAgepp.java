@@ -90,10 +90,21 @@ public class VerifyAgepp extends BaseTest {
 	    
 	  Thread.sleep(4000);
 	BaseTest.click(rp.getLogin());		
-	  
-	  Thread.sleep(7000);
-	  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-dashboard/ion-header/header/ion-navbar/div[2]/ion-grid/ion-row/ion-col[5]")).click();
-	  
+	try {
+		Thread.sleep(6000);
+		driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-dashboard/ion-header/header/ion-navbar/div[2]/ion-grid/ion-row/ion-col[5]")).click();
+
+	} catch (Exception e2) {
+		
+	}
+
+	try {
+		Thread.sleep(6000);
+		driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-dashboard/ion-header/header/ion-navbar/div[2]/ion-grid/ion-row/ion-col[5]/a")).click();
+
+	} catch (Exception e2) {
+		
+	}
 	  Thread.sleep(4000);
 		WebElement name=  driver.findElement(By.xpath("//*[@id='mainsidemenu']/div/ion-content/div[2]/ion-list/ion-item/div[1]/div/ion-label/span[1]/div[1]"));
 		Thread.sleep(2000);
@@ -382,13 +393,13 @@ BaseTest.click(rp.getBackhistory());
 	
 	  
 	Thread.sleep(4000);
-	WebElement gh=  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-viewprofile/ion-content/div[2]/ion-grid[4]/ion-row[8]/ion-col[2]"));
+	WebElement gh=  driver.findElement(By.xpath("(//ion-col[contains(text(),'Marital')]//following::ion-col[@class='col'])[2]"));
 	Thread.sleep(2000);
 	String b1=gh.getText();
 	System.out.println("status :" +b1); 
 	  
 	Thread.sleep(4000);
-	WebElement gh1=  driver.findElement(By.xpath("//ion-col[contains(text(),'Age')]/following-sibling::ion-col[@class='col']"));
+	WebElement gh1=  driver.findElement(By.xpath("(//ion-col[contains(text(),'Age')]//following::ion-col[@class='col'])[2]"));
 	Thread.sleep(2000);
 	String b2=gh1.getText();
 	System.out.println("Age :" +b2); 
@@ -399,13 +410,13 @@ BaseTest.click(rp.getBackhistory());
 	int finalmatchesage=Integer.parseInt(finalage);
 	
 	   
-	Thread.sleep(4000);
-	WebElement gh2=  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-viewprofile/ion-content/div[2]/ion-grid[4]/ion-row[6]/ion-col[2]"));
-	Thread.sleep(2000);
-	String b3=gh2.getText();
+//	Thread.sleep(4000);
+//	WebElement gh2=  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-viewprofile/ion-content/div[2]/ion-grid[4]/ion-row[6]/ion-col[2]"));
+//	Thread.sleep(2000);
+//	String b3=gh2.getText();
 	
 	Thread.sleep(4000);
-	WebElement gh21=  driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-viewprofile/ion-content/div[2]/ion-grid[4]/ion-row[6]/ion-col[2]"));
+	WebElement gh21=  driver.findElement(By.xpath("(//ion-col[contains(text(),'Height')]//following::ion-col[@class='col'])[2]"));
 	Thread.sleep(2000);
 	String b31=gh21.getText();
 	System.out.println("height:"+b31);
@@ -471,7 +482,7 @@ try {
 	
 }
  else {
-	System.out.println("Status notmatched");
+	System.out.println("Status not matched");
 }
 }
 }
