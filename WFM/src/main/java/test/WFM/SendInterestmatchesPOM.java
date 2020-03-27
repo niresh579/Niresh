@@ -58,6 +58,8 @@ public class SendInterestmatchesPOM extends BaseTest {
 		return lastmatches;
 	}
 	
+	
+
 	@FindBy(xpath="//*[@id='menusegment']/ion-segment-button[4]")
 	private WebElement viewednotcontacted;
 
@@ -66,7 +68,11 @@ public class SendInterestmatchesPOM extends BaseTest {
 	}
 
 	
-	
+	@FindBy(xpath="//*[@id='menusegment']/ion-segment-button[5]")
+	private WebElement shortlisted;
+	public WebElement getShortlisted() {
+		return shortlisted;
+	}
 	
 	
 	

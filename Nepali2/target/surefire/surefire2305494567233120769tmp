@@ -1,5 +1,5 @@
 #surefire
-#Thu Mar 26 10:25:43 IST 2020
+#Fri Mar 27 18:28:33 IST 2020
 testng.configurator=org.apache.maven.surefire.testng.conf.TestNG60Configurator
 testng.test.classpath=C\:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali2\\target\\test-classes
 classPathUrl.0=C\:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali2\\target\\test-classes

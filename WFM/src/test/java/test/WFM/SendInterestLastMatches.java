@@ -59,7 +59,7 @@ public class SendInterestLastMatches {
 		    BaseTest.click(rp.getUsername());
 		    Actions a=new Actions(driver);
 			Thread.sleep(4000);
-			a.sendKeys("MUS2060053").build().perform();
+			a.sendKeys("IYR242926").build().perform();
 		    
 		    Thread.sleep(4000);
 		    BaseTest.click(rp.getPassword());
@@ -83,40 +83,67 @@ public class SendInterestLastMatches {
 			name.get(i).click();
 		}
 		  
-		 //send interest
+ //send interest
 		  
+		  try {
+			  Thread.sleep(4000);
+				 List<WebElement> ref3 = driver.findElements(By.xpath("//span[contains(text(),'Send Interest')]"));
+				  System.out.println("Total users : "+ ref3.size());
+				  for (int j = 0; j < ref3.size(); j++) {
+			     Thread.sleep(4000);
+				ref3.get(j).click();
+				Thread.sleep(5000);
+				ref3.get(j).click();
+				
+				Thread.sleep(4000);
+				WebElement upgrade = driver.findElement(By.xpath("(//span[contains(text(),'Upgrade Now')])[3]"));
+				String verify=	upgrade.getText();
+		
+				if (verify.equals("Upgrade Now")) {			
+					System.out.println("matched");
+				}
+				else {
+					System.out.println("Not matched");
+				}
+				Thread.sleep(4000);
+				driver.findElement(By.xpath("/html/body/ion-app/ion-modal/div/mailpopup/ion-content/div[2]/div/div/span/button")).click();
+				
+				  }
+				  
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		  
-		 	 Thread.sleep(4000);
-			 List<WebElement> ref3 = driver.findElements(By.xpath("//span[contains(text(),'Send Interest')]"));
-			  System.out.println("Total users : "+ ref3.size());
-			  for (int j = 0; j < ref3.size(); j++) {
-		     Thread.sleep(4000);
-			ref3.get(j).click();
-			Thread.sleep(5000);
-			ref3.get(j).click();
+		  try {
 			
-			Thread.sleep(4000);
-			BaseTest.getScreenshot(driver, "upgrade");
-			
-			Thread.sleep(4000);
-			WebElement upgrade = driver.findElement(By.xpath("(//span[contains(text(),'Upgrade Now')])[3]"));
-			String verify=	upgrade.getText();
-	
-			if (verify.equals("Upgrade Now")) {
-				System.out.println("matched");
-			}
-			else {
-				System.out.println("Not matched");
-			}
-			Thread.sleep(4000);
-			driver.findElement(By.xpath("/html/body/ion-app/ion-modal/div/mailpopup/ion-content/div[2]/div/div/span/button")).click();
-			
-			  }
+			  Thread.sleep(4000);
+				 List<WebElement> ref3 = driver.findElements(By.xpath("//span[contains(text(),'Send Mail')]"));
+				  System.out.println("Total users : "+ ref3.size());
+				  for (int j = 0; j < ref3.size(); j++) {
+			     Thread.sleep(4000);
+				ref3.get(j).click();
+				
+				
+				Thread.sleep(4000);
+				WebElement upgrade = driver.findElement(By.xpath("(//span[contains(text(),'Upgrade Now')])[3]"));
+				String verify=	upgrade.getText();
+		
+				if (verify.equals("Upgrade Now")) {			
+					System.out.println("matched");
+				}
+				else {
+					System.out.println("Not matched");
+				}
+				Thread.sleep(4000);
+				driver.findElement(By.xpath("/html/body/ion-app/ion-modal/div/mailpopup/ion-content/div[2]/div/div/span/button")).click();
+				
+				  }
 			  
-		    
-
-        	
-        	
+			  
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		 	 
         	
         	
         	
