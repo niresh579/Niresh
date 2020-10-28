@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="131261" started-at="2019-06-11T09:57:48Z" finished-at="2019-06-11T09:59:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="131261" started-at="2019-06-11T09:57:48Z" finished-at="2019-06-11T09:59:59Z">
+      <class name="testscripts.RegisterTest">
+        <test-method status="PASS" signature="reportConfig()[pri:0, instance:testscripts.RegisterTest@523884b2]" name="reportConfig" is-config="true" duration-ms="943" started-at="2019-06-11T15:27:47Z" finished-at="2019-06-11T15:27:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportConfig -->
+        <test-method status="PASS" signature="startUp()[pri:0, instance:testscripts.RegisterTest@523884b2]" name="startUp" is-config="true" duration-ms="9085" started-at="2019-06-11T15:27:48Z" finished-at="2019-06-11T15:27:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="registerTest()[pri:0, instance:testscripts.RegisterTest@523884b2]" name="registerTest" duration-ms="115809" started-at="2019-06-11T15:27:57Z" finished-at="2019-06-11T15:29:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerTest -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testscripts.RegisterTest@523884b2]" name="getResult" is-config="true" duration-ms="6269" started-at="2019-06-11T15:29:53Z" finished-at="2019-06-11T15:29:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerTest status=SUCCESS method=RegisterTest.registerTest()[pri:0, instance:testscripts.RegisterTest@523884b2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="reportflush()[pri:0, instance:testscripts.RegisterTest@523884b2]" name="reportflush" is-config="true" duration-ms="5507" started-at="2019-06-11T15:29:59Z" finished-at="2019-06-11T15:30:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportflush -->
+      </class> <!-- testscripts.RegisterTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

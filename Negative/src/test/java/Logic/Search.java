@@ -84,7 +84,8 @@ public class Search extends BaseTest {
        	
     	   SearchPom rp= new SearchPom(driver);
        	Thread.sleep(5000);
-		    driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+		   // driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+		    driver.get("https://mstage.communitymatrimony.com/cbsmob/login.php");
 		    driver.manage().window().maximize();
 		    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		    
@@ -93,7 +94,7 @@ public class Search extends BaseTest {
 		    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
 			Actions a=new Actions(driver);
 			Thread.sleep(4000);
-			a.sendKeys(e,"AGR451052").build().perform();
+			a.sendKeys(e,"AGR100176").build().perform();
 		    
 		    Thread.sleep(4000);
 		    
@@ -353,7 +354,7 @@ public class Search extends BaseTest {
 		driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[3]/div[1]/div")).click();
 			
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("(//span[@class='button-inner'])[22]")).click();
+		driver.findElement(By.xpath("(//span[@class='button-inner'])[23]")).click();
 		
 		Thread.sleep(4000);
 		BaseTest.click(rp.getTick());
@@ -364,7 +365,7 @@ public class Search extends BaseTest {
 		driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[4]/div[1]/div")).click();
 			
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("(//span[@class='button-inner'])[22]")).click();
+		driver.findElement(By.xpath("(//span[@class='button-inner'])[23]")).click();
 		
 		Thread.sleep(4000);
 		BaseTest.click(rp.getTick()); 
@@ -375,7 +376,7 @@ public class Search extends BaseTest {
 		driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[5]/div[1]/div")).click();
 			
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("(//span[@class='button-inner'])[20]")).click();
+		driver.findElement(By.xpath("(//span[@class='button-inner'])[21]")).click();
 		
 		Thread.sleep(4000);
 		BaseTest.click(rp.getTick());
@@ -391,7 +392,7 @@ public class Search extends BaseTest {
 				driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[6]/div[1]/div")).click();
 					
 				Thread.sleep(4000);
-				driver.findElement(By.xpath("(//span[@class='button-inner'])[24]")).click();
+				driver.findElement(By.xpath("(//span[@class='button-inner'])[25]")).click();
 				
 				Thread.sleep(4000);
 				BaseTest.click(rp.getTick());
@@ -402,7 +403,7 @@ public class Search extends BaseTest {
 				driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[7]/div[1]/div")).click();
 					
 				Thread.sleep(4000);
-				driver.findElement(By.xpath("(//span[@class='button-inner'])[23]")).click();
+				driver.findElement(By.xpath("(//span[@class='button-inner'])[24]")).click();
 				
 				Thread.sleep(4000);
 				BaseTest.click(rp.getTick());
@@ -413,7 +414,7 @@ public class Search extends BaseTest {
 				driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-search/ion-content/div[2]/ion-grid[2]/ion-row/ion-col/form/div[2]/ion-list/ion-item[9]/div[1]/div")).click();
 					
 				Thread.sleep(4000);
-				driver.findElement(By.xpath("(//span[@class='button-inner'])[23]")).click();
+				driver.findElement(By.xpath("(//span[@class='button-inner'])[24]")).click();
 				
 				Thread.sleep(4000);
 				BaseTest.click(rp.getTick());

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.WFM.SendInterestShortlisted">
+      <class name="test.WFM.CityRegistration">
         <methods>
-          <include name="testUntitled"/>
-          <include name="setUp1"/>
+          <include name="setUp"/>
+          <include name="occupationSearch"/>
         </methods>
-      </class> <!-- test.WFM.SendInterestShortlisted -->
+      </class> <!-- test.WFM.CityRegistration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

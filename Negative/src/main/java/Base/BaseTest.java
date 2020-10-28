@@ -114,7 +114,7 @@ public class BaseTest {
 	                         //////////    Excel    COde   ///////////////////////
 	 
 	  public static String getExcelData(String sheetName, int rowNum, int colNum) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	      Workbook wb = WorkbookFactory.create(fis);
 	      Sheet sh = wb.getSheet(sheetName);
 	      Row row = sh.getRow(rowNum);
@@ -124,7 +124,7 @@ public class BaseTest {
 	}
 
 	  public static int getExcelData1(String sheetName, int rowNum, int colNum) throws Throwable{
-			FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+			FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      Sheet sh = wb.getSheet(sheetName);
 			      Row row = sh.getRow(rowNum);
@@ -134,7 +134,7 @@ public class BaseTest {
 			}
 	  
 	  public static int getCellCount(String sheetName) throws Throwable {
-		    FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+		    FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 		 Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheetName);
 		Row row = sh.getRow(0);
@@ -143,7 +143,7 @@ public class BaseTest {
 		} 
 
 	public static int getExcelRandomRowNum(String sheetName) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	      Workbook wb = WorkbookFactory.create(fis);
 	      Sheet sh = wb.getSheet(sheetName);
 	      Random rand = new Random();
@@ -151,31 +151,31 @@ public class BaseTest {
 	      return rowNum;
 	}
 	public static void setExcelData(String sheetName, int rowNum, int colNum,String data) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	      Workbook wb = WorkbookFactory.create(fis);
 	      Sheet sh = wb.getSheet(sheetName);
 	      Row row = sh.getRow(rowNum);
 	      Cell cel = row.createCell(colNum);
 	      cel.setCellValue(data);
-	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	wb.write(fos);
 	wb.close();
 	}
 	public static int getRowCount(String sheetName) throws Throwable {
-	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	      Workbook wb = WorkbookFactory.create(fis);
 	      int rowIndex = wb.getSheet(sheetName).getLastRowNum();
 	      return rowIndex;
 	}
 
 	public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,int data) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	      Workbook wb = WorkbookFactory.create(fis);
 	      Sheet sh = wb.getSheet(sheetName);
 	      Row row = sh.getRow(rowNum);
 	      Cell cel = row.createCell(colNum);
 	      cel.setCellValue(data);
-	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 	wb.write(fos);
 	wb.close();
 	
@@ -204,7 +204,7 @@ public class BaseTest {
 	public static List<HashMap<String, String>> readValueFromExcelSheet()  throws NullPointerException  {
 		List<HashMap<String, String>> mapDatasList = new ArrayList<HashMap<String, String>>();
 		try {
-			File excelLocaltion = new File("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
+			File excelLocaltion = new File("C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\excel\\Registration1.xls");
 
 			String sheetName = "Sheet1";
 

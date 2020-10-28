@@ -1,0 +1,10 @@
+pom\WcsmPIPom.class
+Base\BaseTest.class
+pom\RegistrationPOM.class
+pom\WcsmPOM.class
+pom\NegativePaymentPOM.class
+pom\WcsmPPPOM.class
+pom\EditPPPOM.class
+pom\NegativeEditPiPOM.class
+pom\PasswordCheckPOM.class
+pom\LoginLogoutPOM.class

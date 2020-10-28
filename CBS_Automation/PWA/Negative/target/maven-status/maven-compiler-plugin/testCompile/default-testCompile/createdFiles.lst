@@ -1,0 +1,13 @@
+Logic\NegativeEditPi.class
+Logic\WcsmPP.class
+Logic\NegativePaymentDiamond.class
+Logic\NegativePaymentAssisted.class
+Logic\NegativePaymentPlatinum.class
+Logic\NegativePaymentGold.class
+Logic\Registration.class
+Logic\LoginLogout.class
+Logic\WcsmFemale.class
+Logic\WcsmMale.class
+Logic\EditPP.class
+Logic\WcsmPI.class
+Logic\PasswordCheck.class

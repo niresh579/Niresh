@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logic.NegativeEditPi">
+      <class name="logic.Bug_Report">
         <methods>
-          <include name="testUntitled"/>
           <include name="htmlReport"/>
-          <include name="setUp1"/>
+          <include name="setUp"/>
+          <include name="maiolcode"/>
         </methods>
-      </class> <!-- logic.NegativeEditPi -->
+      </class> <!-- logic.Bug_Report -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

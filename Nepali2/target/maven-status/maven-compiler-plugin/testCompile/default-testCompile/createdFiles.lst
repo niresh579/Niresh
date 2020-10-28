@@ -1,6 +1,8 @@
+logic\RegisterationDesk.class
 logic\LoginLogout.class
 logic\ProfilePreview.class
 logic\StageRegistAllField.class
+logic\NegativePaymentDesk.class
 logic\CallPreference.class
 logic\PasswordCheck.class
 logic\VerifyAgepp.class
@@ -9,6 +11,7 @@ logic\Matches.class
 logic\Search.class
 logic\BlockedMultipleProfileMatches.class
 logic\NegativePaymentDiamond.class
+logic\LoginLogoutDesk.class
 logic\CommunicationSettings.class
 logic\SendInterestMatches.class
 logic\NegativePaymentPlatinum.class

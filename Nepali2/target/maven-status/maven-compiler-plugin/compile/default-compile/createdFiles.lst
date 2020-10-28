@@ -2,11 +2,14 @@ pom\BaseTest$1.class
 pom\ProfilePreviewPOM.class
 pom\BlockedMultipleProfilePOM.class
 pom\SearchPom.class
+pom\RegisterationDeskPOM.class
 pom\SendInterestmatchesPOM.class
+pom\Inbox.class
 pom\NegativePaymentPOM.class
 pom\VerifyAgeppPOM.class
 pom\CallPreferencePOM.class
 pom\BaseTest.class
+pom\Horoscope.class
 pom\CommunicationSettingsPOM.class
 pom\StageRegistAllFieldPOM.class
 pom\BaseTest$2.class

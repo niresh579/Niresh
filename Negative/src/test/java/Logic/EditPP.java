@@ -78,7 +78,8 @@ public class EditPP extends BaseTest{
        	
        	EditPPPOM rp= new EditPPPOM(driver);
        	Thread.sleep(5000);
-		    driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+		  // driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+		   driver.get("https://mstage.communitymatrimony.com/cbsmob/login.php");
 		    driver.manage().window().maximize();
 		    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		    
@@ -87,7 +88,7 @@ public class EditPP extends BaseTest{
 		    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
 			Actions a=new Actions(driver);
 			Thread.sleep(4000);
-			a.sendKeys(e,"AGR451052").build().perform();
+			a.sendKeys(e,"DVM501559").build().perform();
 		    
 		    Thread.sleep(4000);
 		    

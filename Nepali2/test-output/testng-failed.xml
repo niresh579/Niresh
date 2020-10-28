@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logic.ProfilePreview">
+      <class name="logic.NegativePaymentDesk">
         <methods>
-          <include name="setUp1"/>
+          <include name="setUp"/>
           <include name="htmlReport"/>
-          <include name="testUntitled"/>
+          <include name="testCase"/>
+          <include name="mailReport"/>
         </methods>
-      </class> <!-- logic.ProfilePreview -->
+      </class> <!-- logic.NegativePaymentDesk -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

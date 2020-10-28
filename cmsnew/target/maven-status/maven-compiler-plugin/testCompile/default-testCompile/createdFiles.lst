@@ -4,12 +4,10 @@ logic\RegistrationRaasi.class
 logic\ProfilePreview.class
 logic\AgeValidationinSearch.class
 logic\CallPreference.class
-logic\Gmail.class
 logic\Random.class
 logic\VerifyAgepp.class
 logic\DashboardValidation.class
 logic\EditPi.class
-logic\StagingPiShowExtendedMatches.class
 logic\RasiiValidation.class
 logic\StagingPwaRegistration.class
 logic\CommunicationSettings.class

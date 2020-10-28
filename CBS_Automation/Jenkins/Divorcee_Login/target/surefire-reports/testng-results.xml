@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="20623" started-at="2019-08-26T04:47:54Z" finished-at="2019-08-26T04:48:14Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="20623" started-at="2019-08-26T04:47:54Z" finished-at="2019-08-26T04:48:14Z">
+      <class name="com.TestScripts.DivorceeLoginTest">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:com.TestScripts.DivorceeLoginTest@6ea12c19]" name="htmlReport" is-config="true" duration-ms="108" started-at="2019-08-26T04:47:50Z" finished-at="2019-08-26T04:47:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlReport -->
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.TestScripts.DivorceeLoginTest@6ea12c19]" name="startUp" is-config="true" duration-ms="3509" started-at="2019-08-26T04:47:50Z" depends-on-methods="com.Base.BaseTest.htmlReport" finished-at="2019-08-26T04:47:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.TestScripts.DivorceeLoginTest@6ea12c19]" name="Login" duration-ms="20464" started-at="2019-08-26T04:47:54Z" finished-at="2019-08-26T04:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="smsTest(org.testng.ITestResult)[pri:0, instance:com.TestScripts.DivorceeLoginTest@6ea12c19]" name="smsTest" is-config="true" duration-ms="149" started-at="2019-08-26T04:48:14Z" finished-at="2019-08-26T04:48:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login status=SUCCESS method=DivorceeLoginTest.Login()[pri:0, instance:com.TestScripts.DivorceeLoginTest@6ea12c19] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smsTest -->
+      </class> <!-- com.TestScripts.DivorceeLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

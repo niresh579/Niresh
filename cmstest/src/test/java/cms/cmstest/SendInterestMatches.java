@@ -73,7 +73,8 @@ public class SendInterestMatches extends Base {
         @Test
         public void testUntitled() throws InterruptedException {
         	SendInterestmatchesPOM rp=new SendInterestmatchesPOM(driver);
-        	driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+        	//driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+        	driver.get("https://mstage.communitymatrimony.com/cbsmob/login.php");
 		    driver.manage().window().maximize();
 		    
 		    //login
@@ -81,7 +82,7 @@ public class SendInterestMatches extends Base {
 		    Base.btnclick(rp.getUsername());
 		    Actions a=new Actions(driver);
 			Thread.sleep(4000);
-			a.sendKeys("MUS2060053").build().perform();
+			a.sendKeys("AGR100176").build().perform();
 		    	
 		    Thread.sleep(4000);
 		    Base.btnclick(rp.getPassword());

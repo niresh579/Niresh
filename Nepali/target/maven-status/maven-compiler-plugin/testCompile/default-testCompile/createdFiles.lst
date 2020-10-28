@@ -1,7 +1,9 @@
+logic\RegisterationDesk.class
 logic\LoginLogout.class
 logic\PakistaniRegistration.class
 logic\ProfilePreview.class
 logic\StageRegistAllField.class
+logic\NegativePaymentDesk.class
 logic\PasswordCheck.class
 logic\VerifyAgepp.class
 logic\NegativeEditPi.class

@@ -74,7 +74,7 @@ public class StageRegistration extends BaseTest {
 	public void test() throws Throwable {
 		StageRegistrationPom rp=new StageRegistrationPom(driver);
 		Thread.sleep(4000);
-		driver.get("https://mstage.communitymatrimony.com/cbsmob/registration/register.php");
+		driver.get("https://m.communitymatrimony.com/");
 		Thread.sleep(4000);
 		driver.manage().window().maximize();
 		
@@ -139,7 +139,7 @@ public class StageRegistration extends BaseTest {
 			
 			Thread.sleep(4000);
 			WebElement mobile=driver.findElement(By.xpath("//*[@id='CONTACTNO']"));
-			mobile.sendKeys("9176800869");
+			mobile.sendKeys("8015766715");
 			
 			Thread.sleep(5000);
 			BaseTest.click(rp.getMothertongue());
@@ -197,13 +197,17 @@ public class StageRegistration extends BaseTest {
 			Thread.sleep(4000);
 			BaseTest.click(rp.getMaritalstatus());
 			
-			try {
+			 try {
+				
+			
 				Thread.sleep(4000);
 				BaseTest.click(rp.getNoofchild());
 				
-			} catch (Exception e) {
-				System.out.println("no child");
-			}
+				Thread.sleep(4000);
+				driver.findElement(By.xpath("//*[@id='list_view_detail']/li[1]")).click();
+			 } catch (Exception e) {
+					// TODO: handle exception
+				}
 			
 			try {
 				Thread.sleep(4000);
@@ -420,304 +424,7 @@ public class StageRegistration extends BaseTest {
 			Thread.sleep(5000);
 			BaseTest.click(rp.getFamilytype());
 			
-//			Thread.sleep(5000);
-//			BaseTest.click(rp.getFamilyvalues());
-//			
-			
-		   	///muslim matri
-		   	
-		   	try {
-				Thread.sleep(4000);
-				BaseTest.click(rp.getEthinicity());
-				
-				Thread.sleep(4000);
-				Actions acc921 = new Actions(driver);
-				WebElement ma41=driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']"));
-				acc921.doubleClick(ma41).perform();
 
-				Thread.sleep(6000);
-				
-				  BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 16)+"')]")));
-				
-			} catch (Exception e2) {
-				System.out.println("no ethinicity");
-			}
-
-			try {
-				Thread.sleep(4000);
-			    BaseTest.click(rp.getReligiousvalue());
-				
-				Thread.sleep(4000);
-				Actions acc921 = new Actions(driver);
-				WebElement ma41=driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']"));
-				acc921.doubleClick(ma41).perform();
-				
-				Thread.sleep(6000);
-				
-				  BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 17)+"')]")));
-				
-			} catch (Exception e2) {
-				System.out.println("no religiousvalue");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				BaseTest.click(rp.getDressofmodestry());
-			} catch (Exception e2) {
-				System.out.println("no dress of modestry");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				BaseTest.click(rp.getReadquran());
-			} catch (Exception e2) {
-				System.out.println("no Read quran");
-			}
-			
-//			try {
-//				Thread.sleep(4000);
-//			driver.findElement(By.xpath("//*[@id='GOTHRAM']")).click();
-//			Thread.sleep(4000);
-//			Actions acc921 = new Actions(driver);
-//			WebElement ma41=driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']"));
-//			acc921.doubleClick(ma41).perform();
-//			
-//			Thread.sleep(6000);
-//			
-//			  BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 12)+"')]")));
-//			
-//				
-//			} catch (Exception e2) {
-//				System.out.println("no gothram");
-//			}
-			//////muslim matri/////////
-		   	
-		   	try {
-		   
-		   		Thread.sleep(4000);
-				JavascriptExecutor js231 = (JavascriptExecutor)driver;
-			   	  WebElement edi231= driver.findElement(By.id("ABOUTME"));
-			   	js231.executeScript("arguments[0].scrollIntoView(true);",edi231);
-			   	
-		   		Thread.sleep(4000);
-			   	WebElement aboutme=driver.findElement(By.id("ABOUTME"));
-				String y21 = aboutme.getText();
-			System.out.println(y21);
-				
-				System.out.println(y21);
-			} catch (Exception e) {
-				System.out.println("no element1");
-			}
-		   		
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js231 = (JavascriptExecutor)driver;
-			   	  WebElement edi231= driver.findElement(By.xpath("//*[@id='fieldabtme']/div[2]"));
-			   	js231.executeScript("arguments[0].scrollIntoView(true);",edi231);
-			   	
-		   		Thread.sleep(4000);
-			   	WebElement aboutme=driver.findElement(By.xpath("//*[@id='fieldabtme']/div[2]"));
-				String y21=aboutme.getText();
-				System.out.println(y21);
-			} catch (Exception e) {
-				System.out.println("no element2");
-			}
-			
-		 	try {
-		 		Thread.sleep(4000);
-				JavascriptExecutor js231 = (JavascriptExecutor)driver;
-			   	  WebElement edi231= driver.findElement(By.xpath("//*[@id='fieldabtme']"));
-			   	js231.executeScript("arguments[0].scrollIntoView(true);",edi231);
-			   	
-		   		Thread.sleep(4000);
-			   	WebElement aboutme=driver.findElement(By.xpath("//*[@id='fieldabtme']"));
-				String y21=aboutme.getText();
-				System.out.println(y21);
-			} catch (Exception e) {
-				System.out.println("no element3");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				BaseTest.click(rp.getStar());
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 19)+"')]")));
-				
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='RAASI']"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				Thread.sleep(4000);
-				BaseTest.click(rp.getRaasi());
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 20)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no Rassi 1");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='CBSRegistration4']/fieldset[2]/div"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				driver.findElement(By.xpath("//*[@id='CBSRegistration4']/fieldset[2]/div")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 20)+"')]")));
-			} catch (Exception e) {
-				System.out.println("no raasi 2");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='CBSRegistration4']/fieldset[2]/div/div"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				Thread.sleep(4000);
-				driver.findElement(By.xpath("//*[@id='CBSRegistration4']/fieldset[2]/div/div")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 20)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no raasi3");
-			}
-			
-			
-//			
-//			Thread.sleep(4000);
-//			WebElement gothra=driver.findElement(By.xpath("//*[@id='GOTHRA_TXT']"));
-//			gothra.sendKeys("siva");
-//			
-//			BaseTest.click(rp.getDhosam());
-//			
-//			BaseTest.click(rp.getTimeofbirth());
-//			driver.findElement(By.xpath("/html/body/div[4]/div[3]/span[1]")).click();
-//			
-//			BaseTest.click(rp.getCountryofbirth());
-//			driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-//			BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 21)+"')]")));
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='BirthStateDisplay']/fieldset/div"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				BaseTest.click(rp.getStateofbirth());
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 22)+"')]")));
-			} catch (Exception e) {
-				System.out.println("no state1");
-			}
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='BIRTHSTATE']"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-			   	driver.findElement(By.xpath("//*[@id='BIRTHSTATE']")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 22)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no state 2");
-			}
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='BirthStateDisplay']/fieldset/div/div"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				driver.findElement(By.xpath("//*[@id='BirthStateDisplay']/fieldset/div/div")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 22)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no state 3");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div)[1]"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-			   	BaseTest.click(rp.getCityofbirth());
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 23)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no city 1");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div)[1]"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-			   	driver.findElement(By.xpath("//*[@id='BIRTHCITY']")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 23)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no city 2");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div/div)[1]"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-			   	driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div/div)[1]")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 23)+"')]")));
-				
-			} catch (Exception e) {
-				System.out.println("no city 3");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div)[2]"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				BaseTest.click(rp.getChartstyle());
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 24)+"')]")));
-				
-				
-			} catch (Exception e) {
-				System.out.println("no chartstyle1");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("//*[@id='chartstyle']"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				driver.findElement(By.xpath("//*[@id='chartstyle']")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 24)+"')]")));
-				
-				
-			} catch (Exception e) {
-				System.out.println("no chartstyle2");
-			}
-			
-			try {
-				Thread.sleep(4000);
-				JavascriptExecutor js25 = (JavascriptExecutor)driver;
-			   	  WebElement edi25= driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div)[2]"));
-			   	js25.executeScript("arguments[0].scrollIntoView(true);",edi25);
-				driver.findElement(By.xpath("(//*[@id='CitySelectBox']/fieldset/div)[2]")).click();
-				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
-				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Sheet3", 1, 24)+"')]")));
-				
-				
-			} catch (Exception e) {
-				System.out.println("no chartstyle3");
-			}
 			
 			Thread.sleep(4000);
 			BaseTest.click(rp.getContinuebutton());

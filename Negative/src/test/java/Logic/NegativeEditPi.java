@@ -32,7 +32,7 @@ import pom.NegativeEditPiPOM;
 public class NegativeEditPi extends BaseTest{
 	
 	public static WebDriver driver;
-	String driverExecutablePath = "C:\\Users\\CBS Testing\\workspace\\Niresh\\cmstest\\drivernew\\chromedriver.exe"; 
+	String driverExecutablePath = "C:\\Users\\CBS Testing\\workspace\\Niresh\\Negative\\drivernew1\\chromedriver.exe"; 
 
 	
      @BeforeMethod
@@ -74,6 +74,25 @@ public class NegativeEditPi extends BaseTest{
   public void testUntitled() throws Throwable  {
 	  NegativeEditPiPOM rp= new NegativeEditPiPOM(driver);
 	      
+//	  Thread.sleep(5000);
+//	    driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+//	    driver.manage().window().maximize();
+//	    
+//	    //login
+//	    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
+//		Actions a=new Actions(driver);
+//		Thread.sleep(4000);
+//		a.sendKeys(e,"IYR352685").build().perform();
+//	    
+//	    Thread.sleep(4000);
+//	    
+//	    WebElement d=driver.findElement(By.xpath("//*[@id='password1']"));
+//	    Thread.sleep(4000);
+//		Actions b=new Actions(driver);
+//		Thread.sleep(4000);
+//		b.sendKeys(d,"cbstest").build().perform();
+//	 
+	  
 	  Thread.sleep(5000);
 	    driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
 	    driver.manage().window().maximize();
@@ -82,7 +101,7 @@ public class NegativeEditPi extends BaseTest{
 	    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
 		Actions a=new Actions(driver);
 		Thread.sleep(4000);
-		a.sendKeys(e,"IYR352685").build().perform();
+		a.sendKeys(e,"IYR242926").build().perform();
 	    
 	    Thread.sleep(4000);
 	    
@@ -92,6 +111,9 @@ public class NegativeEditPi extends BaseTest{
 		Thread.sleep(4000);
 		b.sendKeys(d,"cbstest").build().perform();
 	    
+	  
+	  
+	  
 	  Thread.sleep(4000);
 	  BaseTest.click(rp.getLogin());
 	  
@@ -261,12 +283,12 @@ public class NegativeEditPi extends BaseTest{
 	Thread.sleep(3000);
 	BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Data", 4, 1)+"')]")));
 	
-	Thread.sleep(4000);
-	BaseTest.click(rp.getGothram());
-	Thread.sleep(4000);
-	BaseTest.click(rp.getSearchbar());
-	Thread.sleep(3000);
-	BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Data", 4, 2)+"')]")));
+//	Thread.sleep(4000);
+//	BaseTest.click(rp.getGothram());
+//	Thread.sleep(4000);
+//	BaseTest.click(rp.getSearchbar());
+//	Thread.sleep(3000);
+//	BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("Data", 4, 2)+"')]")));
 	
 	
 	Thread.sleep(4000);

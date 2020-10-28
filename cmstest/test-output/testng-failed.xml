@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cms.cmstest.SendInterestMatches">
+      <class name="cms.cmstest.Matches">
         <methods>
-          <include name="testUntitled"/>
           <include name="setUp1"/>
+          <include name="testUntitled"/>
         </methods>
-      </class> <!-- cms.cmstest.SendInterestMatches -->
+      </class> <!-- cms.cmstest.Matches -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -254,7 +254,7 @@ public class BaseTest {
          		"===================\r\n" + 
            		"Level 1 \r\n" + 
            		"Module : LoginLogout,\r\n" + 
-           		"Platform : Pwa,\r\n" + 
+           		"Platform : Desktop,\r\n" + 
            		"Job Status: SUCCESS,\r\n" + 
            		"Domain Name : m.pakistanimatrimony.com,\r\n" + 
            		"Location : Adayar-Chennai,\r\n" + 
@@ -308,7 +308,7 @@ public class BaseTest {
        		"===================\r\n" + 
        		"Level 1 \r\n" + 
        		"Module : LoginLogout,\r\n" + 
-       		"Platform : Pwa,\r\n" + 
+       		"Platform : Desktop,\r\n" + 
        		"Error on : "+Error_on+",\r\n" + 
        		"Error Description : "+expt+",\r\n" + 
        		"Domain Name : m.pakistanimatrimony.com,\r\n" + 
@@ -493,7 +493,7 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 	"===================\r\n" + 
 	"Level 1 \r\n" + 
 	"Module : Registration,\r\n" + 
-	"Platform : Pwa,\r\n" + 
+	"Platform : Desktop,\r\n" + 
 	"Job Status: SUCCESS,\r\n" + 
 	"Domain Name : m.pakistanimatrimony.com,\r\n" + 
 	"Location : Adayar-Chennai,\r\n" + 
@@ -547,7 +547,7 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Registration,\r\n" + 
-"Platform : Pwa,\r\n" + 
+"Platform : Desktop,\r\n" + 
 "Error on : element not interactable,\r\n" + 
 "Error Description : Unable to locate element,\r\n" + 
 "Domain Name : "+domain+",\r\n" + 
@@ -603,7 +603,7 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Negative Payment,\r\n" + 
-"Platform : Pwa,\r\n" + 
+"Platform : Desktop,\r\n" + 
 "Job Status: SUCCESS,\r\n" + 
 "Domain Name : m.pakistanimatrimony.com,\r\n" + 
 "Location : Adayar-Chennai,\r\n" + 
@@ -657,7 +657,7 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Negative Payment,\r\n" + 
-"Platform : Pwa,\r\n" + 
+"Platform : Desktop,\r\n" + 
 "Error on : "+Error_on+",\r\n" + 
 	"Error Description : "+expt+",\r\n" + 
 	"Domain Name : m.pakistanimatrimony.com,\r\n" + 

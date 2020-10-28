@@ -1,94 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="72684" started-at="2020-02-21T10:42:23Z" finished-at="2020-02-21T10:43:36Z">
+  <suite name="Default suite" duration-ms="100806" started-at="2020-10-27T15:13:29Z" finished-at="2020-10-27T15:15:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="72684" started-at="2020-02-21T10:42:23Z" finished-at="2020-02-21T10:43:36Z">
-      <class name="logic.NegativeEditPi">
-        <test-method status="PASS" signature="htmlReport()[pri:0, instance:logic.NegativeEditPi@544fe44c]" name="htmlReport" is-config="true" duration-ms="119" started-at="2020-02-21T10:42:23Z" finished-at="2020-02-21T10:42:23Z">
+    <test name="Default test" duration-ms="100806" started-at="2020-10-27T15:13:29Z" finished-at="2020-10-27T15:15:10Z">
+      <class name="logic.Bug_Report">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:logic.Bug_Report@37918c79]" name="htmlReport" is-config="true" duration-ms="471" started-at="2020-10-27T15:13:25Z" finished-at="2020-10-27T15:13:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- htmlReport -->
-        <test-method status="PASS" signature="setUp1()[pri:0, instance:logic.NegativeEditPi@544fe44c]" name="setUp1" is-config="true" duration-ms="3177" started-at="2020-02-21T10:42:23Z" finished-at="2020-02-21T10:42:26Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:logic.Bug_Report@37918c79]" name="setUp" is-config="true" duration-ms="4147" started-at="2020-10-27T15:13:25Z" depends-on-methods="base.BaseTest.htmlReport" finished-at="2020-10-27T15:13:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp1 -->
-        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:logic.NegativeEditPi@544fe44c]" name="testUntitled" duration-ms="69490" started-at="2020-02-21T10:42:26Z" finished-at="2020-02-21T10:43:36Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="linktobasic_details"]/div[1]/div[2]/a/img"}
-  (Session info: chrome=80.0.3987.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2EHDPTI', ip: '192.168.64.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55480}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: da5e04e020b29be52b7d934d3ef42cf0
-*** Element info: {Using=xpath, value=//*[@id="linktobasic_details"]/div[1]/div[2]/a/img}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="linktobasic_details"]/div[1]/div[2]/a/img"}
-  (Session info: chrome=80.0.3987.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2EHDPTI', ip: '192.168.64.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\CBSTES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55480}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: da5e04e020b29be52b7d934d3ef42cf0
-*** Element info: {Using=xpath, value=//*[@id="linktobasic_details"]/div[1]/div[2]/a/img}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy9.click(Unknown Source)
-at base.BaseTest.click(BaseTest.java:62)
-at logic.NegativeEditPi.testUntitled(NegativeEditPi.java:100)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="maiolcode()[pri:0, instance:logic.Bug_Report@37918c79]" name="maiolcode" duration-ms="100756" started-at="2020-10-27T15:13:29Z" finished-at="2020-10-27T15:15:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled -->
-      </class> <!-- logic.NegativeEditPi -->
+        </test-method> <!-- maiolcode -->
+      </class> <!-- logic.Bug_Report -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

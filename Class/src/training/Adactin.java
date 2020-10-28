@@ -5,84 +5,61 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+
 
 
 
 public class Adactin {
 	public static void main(String[] args) throws InterruptedException, AWTException  {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\CBS Testing\\workspace\\Niresh\\Class\\drivernew\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\CBS Testing\\workspace\\Niresh\\Class\\drivernew1\\chromedriver.exe");
+		
 		WebDriver driver=new ChromeDriver();
-		driver.get("https://www.adactin.com/HotelApp/");
+		driver.get("https://www.amazon.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(4000);
-		WebElement gh=driver.findElement(By.xpath("//*[@id='username']"));
-		gh.sendKeys("nireshnirea");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Samsung mobile phone ");
 		Thread.sleep(4000);
-		WebElement gh1=driver.findElement(By.xpath("//*[@id='password']"));
-		gh1.sendKeys("cbstest");
-		
-		Robot r=new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
-	
-		driver.findElement(By.xpath("//*[@id='location']")).click();
-		
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		r.keyPress(KeyEvent.VK_DOWN);
-		r.keyRelease(KeyEvent.VK_DOWN);
-		
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		Thread.sleep(6000);
+		WebElement firstone = driver.findElement(By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]"));
+		String first = firstone.getText();
+		System.out.println("First page phone = " + first);
+		Thread.sleep(6000);
+		driver.findElement(By.xpath("(//span[@class=\"a-size-medium a-color-base a-text-normal\"])[1]")).click();
 		
 		
-		WebElement g=driver.findElement(By.xpath("//*[@id='room_nos']"));
-		Select s=new Select(g);
-		s.selectByValue("5");
-
-		WebElement g1=driver.findElement(By.xpath("//*[@id='adult_room']"));
-		s.selectByValue("2");
 		
-		driver.findElement(By.xpath("//*[@id='Submit']")).click();
+		WebElement scondtone = driver.findElement(By.xpath("//span[@class=\"a-size-large product-title-word-break\"]"));
+		String second = scondtone.getText();
+		System.out.println("second page phone = " + second);
+		Thread.sleep(6000);
 		
-		WebElement b=driver.findElement(By.xpath("//*[@id='radiobutton_2']"));
-		//b.click();
+		Assert.assertEquals(first, second);
 		
-		if (b.isEnabled()) {
-			System.out.println("yes");
+		if (first.equalsIgnoreCase(second)) {
+			System.out.println("Pass");
+			
+		}else {
+			System.out.println("Fail");
 		}
-		else {
-			System.out.println("no");
-		}
-	
-//		Select s=new Select(loc);
-//		s.selectByValue("Paris");
-		////screenshot///////
 		
 		
 		
-		
+	   	  
 		
 		
 	}

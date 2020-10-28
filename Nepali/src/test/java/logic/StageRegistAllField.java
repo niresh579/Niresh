@@ -64,7 +64,7 @@ public class StageRegistAllField extends BaseTest {
 		StageRegistAllFieldPOM rp=new StageRegistAllFieldPOM(driver);
 		Thread.sleep(4000);
 		 logger =  report.startTest("Nepali Registration");
-		driver.get("https://m.nepalimatrimony.com/cbsmob/registration/register.php");
+		driver.get("https://m.communitymatrimony.com/cbsmob/registration/register.php");
 		Thread.sleep(4000);
 		driver.manage().window().maximize();
 		 logger.log(LogStatus.PASS, "URL Launched Successfully");

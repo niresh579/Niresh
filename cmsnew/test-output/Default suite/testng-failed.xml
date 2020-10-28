@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logic.AgeValidationinSearch">
+      <class name="logic.MailCount">
         <methods>
-          <include name="setUp1"/>
           <include name="testUntitled"/>
+          <include name="setUp1"/>
         </methods>
-      </class> <!-- logic.AgeValidationinSearch -->
+      </class> <!-- logic.MailCount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

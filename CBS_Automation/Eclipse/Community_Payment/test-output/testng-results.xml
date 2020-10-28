@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="69683" started-at="2019-12-06T05:42:03Z" finished-at="2019-12-06T05:43:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="69683" started-at="2019-12-06T05:42:03Z" finished-at="2019-12-06T05:43:13Z">
+      <class name="com.Testscripts.PayMentTest">
+        <test-method status="PASS" signature="htmlReport()[pri:0, instance:com.Testscripts.PayMentTest@1e127982]" name="htmlReport" is-config="true" duration-ms="83" started-at="2019-12-06T05:42:01Z" finished-at="2019-12-06T05:42:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlReport -->
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.Testscripts.PayMentTest@1e127982]" name="startUp" is-config="true" duration-ms="2432" started-at="2019-12-06T05:42:01Z" depends-on-methods="com.Base.BaseTest.htmlReport" finished-at="2019-12-06T05:42:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="payment()[pri:0, instance:com.Testscripts.PayMentTest@1e127982]" name="payment" duration-ms="69517" started-at="2019-12-06T05:42:03Z" finished-at="2019-12-06T05:43:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payment -->
+        <test-method status="PASS" signature="smsTest(org.testng.ITestResult)[pri:0, instance:com.Testscripts.PayMentTest@1e127982]" name="smsTest" is-config="true" duration-ms="156" started-at="2019-12-06T05:43:13Z" finished-at="2019-12-06T05:43:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=payment status=SUCCESS method=PayMentTest.payment()[pri:0, instance:com.Testscripts.PayMentTest@1e127982] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smsTest -->
+      </class> <!-- com.Testscripts.PayMentTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

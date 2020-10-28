@@ -54,12 +54,14 @@ public class BaseTest {
 	static WebDriver driver;
 	public static ExtentReports report;
 	public static String Error_on;
+ 
 	    public static ExtentTest logger;
-	    public static String domain,date1;
+	    public static String domain;
+	    public static String date1;
 	    public static String exception;
-	    public static String error;
+	    public static String error,expt;
 	    public static String failedstatus;
-	    public static String expt,ex,exp,e,expti,exptio,status;
+	    public static String ex,exp,e,expti,exptio,status;
 	    static String html =  "MyReport.html";
 
 
@@ -124,7 +126,7 @@ public class BaseTest {
 	      Sheet sh = wb.getSheet(sheetName);
 	      Row row = sh.getRow(rowNum);
 	      String data = row.getCell(colNum).getStringCellValue();
-	      wb.close();
+	      
 	return data;
 	}
 
@@ -134,7 +136,7 @@ public class BaseTest {
 			      Sheet sh = wb.getSheet(sheetName);
 			      Row row = sh.getRow(rowNum);
 			      int data1 = (int) row.getCell(colNum).getNumericCellValue();
-			      wb.close();
+			      //wb.close();
 			return data1;
 			}
 	  
@@ -164,7 +166,7 @@ public class BaseTest {
 	      cel.setCellValue(data);
 	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
 	wb.write(fos);
-	wb.close();
+	//wb.close();
 	}
 	public static int getRowCount(String sheetName) throws Throwable {
 	FileInputStream fis = new FileInputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
@@ -182,7 +184,7 @@ public class BaseTest {
 	      cel.setCellValue(data);
 	      FileOutputStream fos = new FileOutputStream("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
 	wb.write(fos);
-	wb.close();
+	//wb.close();
 	
 	
 	 
@@ -209,7 +211,7 @@ public class BaseTest {
 	public static List<HashMap<String, String>> readValueFromExcelSheet()  throws NullPointerException  {
 		List<HashMap<String, String>> mapDatasList = new ArrayList<HashMap<String, String>>();
 		try {
-			File excelLocaltion = new File("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali2\\excel\\Registration1.xls");
+			File excelLocaltion = new File("C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\excel\\Registration1.xls");
 
 			String sheetName = "Sheet1";
 
@@ -252,18 +254,20 @@ public class BaseTest {
 	}
 	/////////////////Login Logout////////////////
 	///////////////////////////  SMS CODE   ////////////////////////////////////////
+	
+	///level1
+	
     public static void sendVFSms(String domain,String Error_on,String date1) throws Exception {
       String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
          		"===================\r\n" + 
            		"Level 1 \r\n" + 
            		"Module : LoginLogout,\r\n" + 
-           		"Platform : Pwa,\r\n" + 
+           		"Platform : Desktop,\r\n" + 
            		"Job Status: SUCCESS,\r\n" + 
-           		"Domain Name : m.pakistanimatrimony.com,\r\n" + 
-           		"Location : Adayar-Chennai,\r\n" + 
-           		""+date1+"";
+           		"Domain Name : pakistanimatrimony.com,\r\n" + 
+           		"Location : Adayar-Chennai,\r\n" +date1;
         //0,9789352793,9840870629
-        String mobileno="7338988910,9789352793,9840870629";
+        String mobileno="733898891";
         String[] s = mobileno.split(",");
         for (int i = 0; i < s.length; i++) {
 
@@ -306,19 +310,133 @@ public class BaseTest {
 
     } 
  }
+    
+    //level 2
+    public static void sendVFSms3() throws Exception {
+        String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+           		"===================\r\n" + 
+             		"Level 2 \r\n" + 
+             		"Module : LoginLogout,\r\n" + 
+             		"Platform : Desktop,\r\n" + 
+             		"Job Status: SUCCESS,\r\n" + 
+             		"Domain Name : pakistanimatrimony.com,\r\n" + 
+             		"Location : Adayar-Chennai,\r\n" + date1;
+          //0,9789352793,9840870629
+          String mobileno="733898891";
+          String[] s = mobileno.split(",");
+          for (int i = 0; i < s.length; i++) {
+
+
+          String url = "http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+          URL obj = new URL(url);
+          HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+          //add reuqest header
+          con.setRequestMethod("POST");
+          //con.setRequestProperty("User-Agent", USER_AGENT);
+          con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+          String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+          // Send post request
+          con.setDoOutput(true);
+          DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+          wr.writeBytes(urlParameters);
+          wr.flush();
+          wr.close();
+
+          int responseCode = con.getResponseCode();
+          System.out.println("\nSending 'POST' request to URL : " + url);
+          System.out.println("Post parameters : " + urlParameters);
+          System.out.println("Response Code : " + responseCode);
+
+          BufferedReader in = new BufferedReader(
+                  new InputStreamReader(con.getInputStream()));
+          String inputLine;
+          StringBuffer response = new StringBuffer();
+
+          while ((inputLine = in.readLine()) != null) {
+              response.append(inputLine);
+          }
+          in.close();
+
+          //print result
+          System.out.println(response.toString());
+
+      } 
+   }  
+    
+    //level 3
+    
+    public static void sendVFSms3_Pass3() throws Exception {
+        String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+           		"===================\r\n" + 
+             		"Level 3 \r\n" + 
+             		"Module : LoginLogout,\r\n" + 
+             		"Platform : Desktop,\r\n" + 
+             		"Job Status: SUCCESS,\r\n" + 
+             		"Domain Name : pakistanimatrimony.com,\r\n" + 
+             		"Location : Adayar-Chennai,\r\n" + 
+             		""+date1+"";
+          //0,9789352793,9840870629
+          String mobileno="801576671";
+          String[] s = mobileno.split(",");
+          for (int i = 0; i < s.length; i++) {
+
+
+          String url = "http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+          URL obj = new URL(url);
+          HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+          //add reuqest header
+          con.setRequestMethod("POST");
+          //con.setRequestProperty("User-Agent", USER_AGENT);
+          con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+          String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+          // Send post request
+          con.setDoOutput(true);
+          DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+          wr.writeBytes(urlParameters);
+          wr.flush();
+          wr.close();
+
+          int responseCode = con.getResponseCode();
+          System.out.println("\nSending 'POST' request to URL : " + url);
+          System.out.println("Post parameters : " + urlParameters);
+          System.out.println("Response Code : " + responseCode);
+
+          BufferedReader in = new BufferedReader(
+                  new InputStreamReader(con.getInputStream()));
+          String inputLine;
+          StringBuffer response = new StringBuffer();
+
+          while ((inputLine = in.readLine()) != null) {
+              response.append(inputLine);
+          }
+          in.close();
+
+          //print result
+          System.out.println(response.toString());
+
+      } 
+   }  
+    
+    //level 1
  public static void sendVFSms1(String domain,String Error_on,String date1,String failedstatus) throws Exception {
        String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
        		"===================\r\n" + 
        		"Level 1 \r\n" + 
        		"Module : LoginLogout,\r\n" + 
-       		"Platform : Pwa,\r\n" + 
+       		"Platform : Desktop,\r\n" + 
        		"Error on : "+Error_on+",\r\n" + 
        		"Error Description : "+expt+",\r\n" + 
-       		"Domain Name : m.pakistanimatrimony.com,\r\n" + 
+       		"Domain Name : pakistanimatrimony.com,\r\n" + 
        		"Location : Adayar-Chennai,\r\n" + 
        		""+date1+"";
        		//0,9789352793,9840870629
-        String mobileno="7338988910,9789352793,9840870629";
+        String mobileno="733898891";
         String[] s = mobileno.split(",");
         for (int i = 0; i < s.length; i++) {
         String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
@@ -359,6 +477,120 @@ public class BaseTest {
 
     }
     }
+
+ 
+ //level 2
+ 
+ public static void sendVFSms2() throws Exception {
+     String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+     		"===================\r\n" + 
+     		"Level 2 \r\n" + 
+     		"Module : LoginLogout,\r\n" + 
+     		"Platform : Desktop,\r\n" + 
+     		"Error on : "+Error_on+",\r\n" + 
+     		"Error Description : "+expt+",\r\n" + 
+     		"Domain Name : pakistanimatrimony.com,\r\n" + 
+     		"Location : Adayar-Chennai,\r\n" + 
+     		""+date1+"";
+     		//0,9789352793,9840870629
+      String mobileno="733898891";
+      String[] s = mobileno.split(",");
+      for (int i = 0; i < s.length; i++) {
+      String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+      URL obj = new URL(url);
+      HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+      //add reuqest header
+      con.setRequestMethod("POST");
+      //con.setRequestProperty("User-Agent", USER_AGENT);
+      con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+      String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+      // Send post request
+      con.setDoOutput(true);
+      DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+      wr.writeBytes(urlParameters);
+      wr.flush();
+      wr.close();
+
+      int responseCode = con.getResponseCode();
+      System.out.println("\nSending 'POST' request to URL : " + url);
+      System.out.println("Post parameters : " + urlParameters);
+      System.out.println("Response Code : " + responseCode);
+
+      BufferedReader in = new BufferedReader(
+              new InputStreamReader(con.getInputStream()));
+      String inputLine;
+      StringBuffer response = new StringBuffer();
+
+      while ((inputLine = in.readLine()) != null) {
+          response.append(inputLine);
+      }
+      in.close();
+
+      //print result
+      System.out.println(response.toString());
+
+  }
+  }
+
+ 
+ //level 3
+ 
+ public static void sendVFSms_Fail3(String domain,String Error_on,String date1) throws Exception {
+     String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+     		"===================\r\n" + 
+     		"Level 3 \r\n" + 
+     		"Module : LoginLogout,\r\n" + 
+     		"Platform : Desktop,\r\n" + 
+     		"Error on : "+Error_on+",\r\n" + 
+     		"Error Description : "+expt+",\r\n" + 
+     		"Domain Name : pakistanimatrimony.com,\r\n" + 
+     		"Location : Adayar-Chennai,\r\n" + 
+     		""+date1+"";
+     		//0,9789352793,9840870629
+      String mobileno="801576671";
+      String[] s = mobileno.split(",");
+      for (int i = 0; i < s.length; i++) {
+      String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+      URL obj = new URL(url);
+      HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+      //add reuqest header
+      con.setRequestMethod("POST");
+      //con.setRequestProperty("User-Agent", USER_AGENT);
+      con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+      String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+      // Send post request
+      con.setDoOutput(true);
+      DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+      wr.writeBytes(urlParameters);
+      wr.flush();
+      wr.close();
+
+      int responseCode = con.getResponseCode();
+      System.out.println("\nSending 'POST' request to URL : " + url);
+      System.out.println("Post parameters : " + urlParameters);
+      System.out.println("Response Code : " + responseCode);
+
+      BufferedReader in = new BufferedReader(
+              new InputStreamReader(con.getInputStream()));
+      String inputLine;
+      StringBuffer response = new StringBuffer();
+
+      while ((inputLine = in.readLine()) != null) {
+          response.append(inputLine);
+      }
+      in.close();
+
+      //print result
+      System.out.println(response.toString());
+
+  }
+  }
 
  
  /////////////////////////////  Mail   ////////////
@@ -490,18 +722,18 @@ public class BaseTest {
  
 /////////////////Registration////////////////
 ///////////////////////////  SMS CODE   ////////////////////////////////////////
-public static void sendVFSmsreg(String domain,String Error_on,String date1) throws Exception {
+public static void sendVFSmsreg(String date1) throws Exception {
 String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
 	"===================\r\n" + 
 	"Level 1 \r\n" + 
 	"Module : Registration,\r\n" + 
-	"Platform : Pwa,\r\n" + 
+	"Platform : Desktop,\r\n" + 
 	"Job Status: SUCCESS,\r\n" + 
-	"Domain Name : m.pakistanimatrimony.com,\r\n" + 
+	"Domain Name : pakistanimatrimony.com,\r\n" + 
 	"Location : Adayar-Chennai,\r\n" + 
 	""+date1+"";
-
-String mobileno="7338988910,9789352793,9840870629";
+//,9789352793,9840870629
+String mobileno="7338988910";
 String[] s = mobileno.split(",");
 for (int i = 0; i < s.length; i++) {
 
@@ -544,19 +776,133 @@ System.out.println(response.toString());
 
 } 
 }
-public static void sendVFSmsreg1(String domain,String Error_on,String date1,String failedstatus) throws Exception {
+
+//LEVEL2
+public static void sendVFSmsreg2(String date1) throws Exception {
+    String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+       		"===================\r\n" + 
+         		"Level 2 \r\n" + 
+         		"Module : Registration,\r\n" + 
+         		"Platform : Desktop,\r\n" + 
+         		"Job Status: SUCCESS,\r\n" + 
+         		"Domain Name : pakistanimatrimony.com,\r\n" + 
+         		"Location : Adayar-Chennai,\r\n" + 
+         		""+date1+"";
+      //0,9789352793,9840870629
+      String mobileno="7338988910";
+      String[] s = mobileno.split(",");
+      for (int i = 0; i < s.length; i++) {
+
+
+      String url = "http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+      URL obj = new URL(url);
+      HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+      //add reuqest header
+      con.setRequestMethod("POST");
+      //con.setRequestProperty("User-Agent", USER_AGENT);
+      con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+      String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+      // Send post request
+      con.setDoOutput(true);
+      DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+      wr.writeBytes(urlParameters);
+      wr.flush();
+      wr.close();
+
+      int responseCode = con.getResponseCode();
+      System.out.println("\nSending 'POST' request to URL : " + url);
+      System.out.println("Post parameters : " + urlParameters);
+      System.out.println("Response Code : " + responseCode);
+
+      BufferedReader in = new BufferedReader(
+              new InputStreamReader(con.getInputStream()));
+      String inputLine;
+      StringBuffer response = new StringBuffer();
+
+      while ((inputLine = in.readLine()) != null) {
+          response.append(inputLine);
+      }
+      in.close();
+
+      //print result
+      System.out.println(response.toString());
+
+  } 
+}  
+
+//level 3
+
+public static void sendVFSmsreg3(String date1) throws Exception {
+    String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+       		"===================\r\n" + 
+         		"Level 3 \r\n" + 
+         		"Module : Registration,\r\n" + 
+         		"Platform : Desktop,\r\n" + 
+         		"Job Status: SUCCESS,\r\n" + 
+         		"Domain Name : pakistanimatrimony.com,\r\n" + 
+         		"Location : Adayar-Chennai,\r\n" + 
+         		""+date1+"";
+      //0,9789352793,9840870629
+      String mobileno="8015766715";
+      String[] s = mobileno.split(",");
+      for (int i = 0; i < s.length; i++) {
+
+
+      String url = "http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+      URL obj = new URL(url);
+      HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+      //add reuqest header
+      con.setRequestMethod("POST");
+      //con.setRequestProperty("User-Agent", USER_AGENT);
+      con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+      String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+      // Send post request
+      con.setDoOutput(true);
+      DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+      wr.writeBytes(urlParameters);
+      wr.flush();
+      wr.close();
+
+      int responseCode = con.getResponseCode();
+      System.out.println("\nSending 'POST' request to URL : " + url);
+      System.out.println("Post parameters : " + urlParameters);
+      System.out.println("Response Code : " + responseCode);
+
+      BufferedReader in = new BufferedReader(
+              new InputStreamReader(con.getInputStream()));
+      String inputLine;
+      StringBuffer response = new StringBuffer();
+
+      while ((inputLine = in.readLine()) != null) {
+          response.append(inputLine);
+      }
+      in.close();
+
+      //print result
+      System.out.println(response.toString());
+
+  } 
+}  
+public static void sendVFSmsreg1(String error, String expt, String date1) throws Exception {
 String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Registration,\r\n" + 
-"Platform : Pwa,\r\n" + 
-"Error on : "+Error_on+",\r\n" + 
+"Platform : Desktop,\r\n" + 
+"Error on : "+error+",\r\n" + 
 	"Error Description : "+expt+",\r\n" + 
-	"Domain Name : m.pakistanimatrimony.com,\r\n" + 
+	"Domain Name : pakistanimatrimony.com,\r\n" + 
 "Location : Adayar-Chennai,\r\n" + 
 ""+date1+"";
 
-String mobileno="7338988910,9789352793,9840870629";
+//,9789352793,9840870629
+String mobileno="7338988910";
 String[] s = mobileno.split(",");
 for (int i = 0; i < s.length; i++) {
 String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
@@ -598,6 +944,121 @@ System.out.println(response.toString());
 }
 }
 
+public static void sendVFSmsregfail2(String error, String expt, String date1) throws Exception {
+    String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+    		"===================\r\n" + 
+    		"Level 2 \r\n" + 
+    		"Module : Registration,\r\n" + 
+    		"Platform : Desktop,\r\n" + 
+    		"Error on : "+error+",\r\n" + 
+    		"Error Description : "+expt+",\r\n" + 
+    		"Domain Name : pakistanimatrimony.com,\r\n" + 
+    		"Location : Adayar-Chennai,\r\n" + 
+    		""+date1+"";
+    		//0,9789352793,9840870629
+     String mobileno="7338988910";
+     String[] s = mobileno.split(",");
+     for (int i = 0; i < s.length; i++) {
+     String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+     URL obj = new URL(url);
+     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+     //add reuqest header
+     con.setRequestMethod("POST");
+     //con.setRequestProperty("User-Agent", USER_AGENT);
+     con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+     String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+     // Send post request
+     con.setDoOutput(true);
+     DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+     wr.writeBytes(urlParameters);
+     wr.flush();
+     wr.close();
+
+     int responseCode = con.getResponseCode();
+     System.out.println("\nSending 'POST' request to URL : " + url);
+     System.out.println("Post parameters : " + urlParameters);
+     System.out.println("Response Code : " + responseCode);
+
+     BufferedReader in = new BufferedReader(
+             new InputStreamReader(con.getInputStream()));
+     String inputLine;
+     StringBuffer response = new StringBuffer();
+
+     while ((inputLine = in.readLine()) != null) {
+         response.append(inputLine);
+     }
+     in.close();
+
+     //print result
+     System.out.println(response.toString());
+
+ }
+ }
+
+
+//level 3
+
+public static void sendVFSmsregfail3(String error, String expt, String date1) throws Exception {
+    String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" + 
+    		"===================\r\n" + 
+    		"Level 3 \r\n" + 
+    		"Module : Registration,\r\n" + 
+    		"Platform : Desktop,\r\n" + 
+    		"Error on : "+error+",\r\n" + 
+    		"Error Description : "+expt+",\r\n" + 
+    		"Domain Name : pakistanimatrimony.com,\r\n" + 
+    		"Location : Adayar-Chennai,\r\n" + 
+    		""+date1+"";
+    		//0,9789352793,9840870629
+     String mobileno="8015766715";
+     String[] s = mobileno.split(",");
+     for (int i = 0; i < s.length; i++) {
+     String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+     URL obj = new URL(url);
+     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+     //add reuqest header
+     con.setRequestMethod("POST");
+     //con.setRequestProperty("User-Agent", USER_AGENT);
+     con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+     String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+     // Send post request
+     con.setDoOutput(true);
+     DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+     wr.writeBytes(urlParameters);
+     wr.flush();
+     wr.close();
+
+     int responseCode = con.getResponseCode();
+     System.out.println("\nSending 'POST' request to URL : " + url);
+     System.out.println("Post parameters : " + urlParameters);
+     System.out.println("Response Code : " + responseCode);
+
+     BufferedReader in = new BufferedReader(
+             new InputStreamReader(con.getInputStream()));
+     String inputLine;
+     StringBuffer response = new StringBuffer();
+
+     while ((inputLine = in.readLine()) != null) {
+         response.append(inputLine);
+     }
+     in.close();
+
+     //print result
+     System.out.println(response.toString());
+
+ }
+ }
+
+
+
+
+
 /////////////////Negative////////////////
 ///////////////////////////  SMS CODE   ////////////////////////////////////////
 public static void sendVFSmsnegative(String domain,String Error_on,String date1) throws Exception {
@@ -605,9 +1066,9 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Negative Payment,\r\n" + 
-"Platform : Pwa,\r\n" + 
+"Platform : Desktop,\r\n" + 
 "Job Status: SUCCESS,\r\n" + 
-"Domain Name : m.pakistanimatrimony.com,\r\n" + 
+"Domain Name : pakistanimatrimony.com,\r\n" + 
 "Location : Adayar-Chennai,\r\n" + 
 ""+date1+"";
 
@@ -659,14 +1120,14 @@ String message="[ Global ][ 24/7 QA Monitoring Alert ]\r\n" +
 "===================\r\n" + 
 "Level 1 \r\n" + 
 "Module : Negative Payment,\r\n" + 
-"Platform : Pwa,\r\n" + 
+"Platform : Desktop,\r\n" + 
 "Error on : no such element exception ,\r\n" + 
 "Error Description : Unable to locate element,\r\n" + 
 "Domain Name : "+domain+",\r\n" + 
 "Location : Adayar-Chennai,\r\n" + 
 ""+date1+"";
 
-String mobileno="7338988910";
+String mobileno="733898891";
 String[] s = mobileno.split(",");
 for (int i = 0; i < s.length; i++) {
 String url ="http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
@@ -719,6 +1180,8 @@ System.out.println(response.toString());
  	 //test=reports.startTest("Android Registeration Test");
       
 	}
+
+
 
  
 

@@ -20,7 +20,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 public class Viewedmyprofile extends Base{
 	public static WebDriver driver;
-	String driverExecutablePath = "C:\\\\\\\\Users\\\\\\\\CBS Testing\\\\\\\\workspace\\\\\\\\Niresh\\\\\\\\cmstest\\\\\\\\drivernew\\\\\\\\chromedriver.exe";
+	String driverExecutablePath = "C:\\Users\\CBS Testing\\workspace\\Niresh\\cmstest\\drivernew1\\chromedriver.exe";
 
 	ExtentReports report;
 	ExtentTest logger;
@@ -70,7 +70,7 @@ public class Viewedmyprofile extends Base{
 		    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
 			Actions a=new Actions(driver);
 			Thread.sleep(4000);
-			a.sendKeys(e,"IYR242926").build().perform();
+			a.sendKeys(e,"Kmc451599").build().perform();
 		    
 		    Thread.sleep(4000);
 		    
@@ -83,65 +83,91 @@ public class Viewedmyprofile extends Base{
 		  Thread.sleep(4000);
 		  Base.btnclick(rp.getLogin());
 		  
-		  Thread.sleep(4000);
+		  Thread.sleep(6000);
 		  JavascriptExecutor gh = (JavascriptExecutor)driver;
     	  WebElement edit1= driver.findElement(By.xpath("//span[contains(text(),'VIEWED MY PROFILE')]"));
 	  	  gh.executeScript("arguments[0].scrollIntoView(true);",edit1);
-		  Thread.sleep(4000);
+		  Thread.sleep(6000);
 		 // driver.findElement(By.xpath("//*[@id='menusegment']/ion-segment-button[6]")).click();
 		  driver.findElement(By.xpath("//span[contains(text(),'VIEWED MY PROFILE')]")).click();
-		  //shortlist
-			 Thread.sleep(4000);
-			 
-				  List<WebElement> ref = driver.findElements(By.xpath("//span[contains(text(),'Shortlist')]"));
-				  System.out.println("aaa 1 : "+ ref.size());
-				  for (int i = 1; i <ref.size(); i++) {
-			 	driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-matches/ion-content/div[2]/ion-list/ion-row["+i+"]/ion-grid/ion-row[1]/ion-col[2]/div[1]/div/span"));
-					  Thread.sleep(4000); 
-					  ref.get(i).click();
-				  Thread.sleep(3000);
-				  }	  
-				  Thread.sleep(4000);
-				WebElement element = driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-matches/ion-content/div[2]/ion-list/ion-row[1]/ion-grid/ion-row[1]/ion-col[2]/div[1]/div/span"));
-					
-				String ab= element.getText();
-					
-					 
-			  
-			 Thread.sleep(3000);
-		    	JavascriptExecutor js = (JavascriptExecutor)driver;
-		    	  WebElement edit= driver.findElement(By.xpath("(//span[@class='clr36 font10'])[1]"));
-			  	  js.executeScript("arguments[0].scrollIntoView(true);",edit);
-			  	  
-			 Thread.sleep(4000);
-			  String b1 = driver.findElement(By.xpath("(//span[@class='clr36 font10'])[1]")).getText();
-	      System.out.println("2 "+b1);
-	      String[] split = b1.split("|");
-	     System.out.println("3 "+split[0]);
-					    	 
+		  
+		  Thread.sleep(3000);
+		  
+		  try {
 			  Thread.sleep(4000);
-			 
-		      Base.btnclick(rp.getShortlisted());
 			  
-			  Thread.sleep(3000);
-			  
-			  List<WebElement> ref2 = driver.findElements(By.xpath("//span[@class='clr36 font10']"));
-			  System.out.println("aaa 2 : "+ ref2.size());
-			  for (int i = 1; i <ref2.size(); i++) {
-				  
-		 Thread.sleep(3000);		 
-		String b23=	ref2.get(i).getText();
-		
+			  WebElement name=driver.findElement(By.xpath("(//div[@class='id-detail res_txt'])[1]"));
+			  String a1=name.getText();
+				System.out.println(a1);
+				
+		} catch (Exception e2) {
+			Thread.sleep(4000);
+			System.out.println(" No profiles in View my profile section");
+		}
+		 
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  //shortlist
+//			 Thread.sleep(4000);
+//			 
+//				  List<WebElement> ref = driver.findElements(By.xpath("//span[contains(text(),'Shortlist')]"));
+//				  System.out.println("aaa 1 : "+ ref.size());
+//				  for (int i = 1; i <ref.size(); i++) {
+//			 	driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-matches/ion-content/div[2]/ion-list/ion-row["+i+"]/ion-grid/ion-row[1]/ion-col[2]/div[1]/div/span"));
+//					  Thread.sleep(4000); 
+//					  ref.get(i).click();
+//				  Thread.sleep(3000);
+//				  }	  
+//				  Thread.sleep(4000);
+//				WebElement element = driver.findElement(By.xpath("/html/body/ion-app/ng-component/page-matches/ion-content/div[2]/ion-list/ion-row[1]/ion-grid/ion-row[1]/ion-col[2]/div[1]/div/span"));
+//					
+//				String ab= element.getText();
+//					
+//					 
+//			  
+//			 Thread.sleep(3000);
+//		    	JavascriptExecutor js = (JavascriptExecutor)driver;
+//		    	  WebElement edit= driver.findElement(By.xpath("(//span[@class='clr36 font10'])[1]"));
+//			  	  js.executeScript("arguments[0].scrollIntoView(true);",edit);
+//			  	  
+//			 Thread.sleep(4000);
+//			  String b1 = driver.findElement(By.xpath("(//span[@class='clr36 font10'])[1]")).getText();
+//	      System.out.println("2 "+b1);
+//	      String[] split = b1.split("|");
+//	     System.out.println("3 "+split[0]);
+//					    	 
+//			  Thread.sleep(4000);
+//			 
+//		      Base.btnclick(rp.getShortlisted());
+//			  
+//			  Thread.sleep(3000);
+//			  
+//			  List<WebElement> ref2 = driver.findElements(By.xpath("//span[@class='clr36 font10']"));
+//			  System.out.println("aaa 2 : "+ ref2.size());
+//			  for (int i = 1; i <ref2.size(); i++) {
+//				  
+//		 Thread.sleep(3000);		 
+//		String b23=	ref2.get(i).getText();
+//		
+//			
+//			
+//			Thread.sleep(3000);
+//				  if (b23.contains(ab)) {
+//					System.out.println("4  "+b23+  "Matched");
+//				} else {
+//	              System.out.println("Not matched");
+//				}
 			
-			
-			Thread.sleep(3000);
-				  if (b23.contains(ab)) {
-					System.out.println("4  "+b23+  "Matched");
-				} else {
-	              System.out.println("Not matched");
-				}
-			
-			  }
+	//		  }
 			  
 			  
 			  

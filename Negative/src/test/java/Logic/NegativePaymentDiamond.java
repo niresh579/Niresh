@@ -77,14 +77,15 @@ public class NegativePaymentDiamond{
        public void testUntitled() throws Throwable {
     	   NegativePaymentPOM rp=new NegativePaymentPOM(driver);
     	   Thread.sleep(5000);
-   	    driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+   	  //  driver.get("https://m.communitymatrimony.com/cbsmob/login.php");
+    	   driver.get("https://mstage.communitymatrimony.com/cbsmob/login.php");
    	    driver.manage().window().maximize();
    	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
    	    
    	    WebElement e=driver.findElement(By.xpath("//*[@id='idEmail']"));
    		Actions a=new Actions(driver);
    		Thread.sleep(4000);
-   		a.sendKeys(e,"IYR242926").build().perform();
+   		a.sendKeys(e,"AGR100176").build().perform();
    	    	
    	    Thread.sleep(4000); 
    	    

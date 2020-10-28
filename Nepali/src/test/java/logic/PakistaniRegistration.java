@@ -28,7 +28,7 @@ import pom.StageRegistAllFieldPOM;
 
 public class PakistaniRegistration extends BaseTest {
 	public static WebDriver driver;
-	String driverExecutablePath= "C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\drivernew\\chromedriver.exe";
+	String driverExecutablePath= "C:\\Users\\CBS Testing\\workspace\\Niresh\\Nepali\\driver\\chromedriver.exe";
 
 	@BeforeMethod
 	public void launch() {
@@ -335,7 +335,7 @@ public class PakistaniRegistration extends BaseTest {
 			////////////page3///////////
 			
 			BaseTest.click(rp.getHeight());
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 	        List<WebElement> heigt = driver.findElements(By.xpath("//div[@class='dww dwrc']//ul//li"));
 	        int z = heigt.size();
 	        //System.out.println(a);
@@ -362,6 +362,7 @@ public class PakistaniRegistration extends BaseTest {
 			Thread.sleep(4000);
 			BaseTest.click(rp.getEducation());
 			driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
+			Thread.sleep(7000);
 			BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("StageRegist", 1, 18)+"')]")));
 			logger.log(LogStatus.PASS, " Entered Education");
 			
@@ -390,6 +391,7 @@ public class PakistaniRegistration extends BaseTest {
 				
 				BaseTest.click(rp.getOccupation());
 				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
+				Thread.sleep(7000);
 				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("StageRegist", 1, 20)+"')]")));
 				
 				logger.log(LogStatus.PASS, " Entered Occupation");
@@ -416,6 +418,7 @@ public class PakistaniRegistration extends BaseTest {
 				Thread.sleep(4000);
 				BaseTest.click(rp.getIncome());
 				driver.findElement(By.xpath("//*[@id='RegPanelSearchvalue']")).click();
+				Thread.sleep(7000);
 				BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("StageRegist", 1, 22)+"')]")));
 					
 
@@ -467,7 +470,7 @@ public class PakistaniRegistration extends BaseTest {
 				acc921.doubleClick(ma41).perform();
 
 				Thread.sleep(6000);
-				
+				Thread.sleep(7000);
 				  BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("StageRegist", 1, 23)+"')]")));
 				
 			} catch (Exception e2) {
@@ -484,7 +487,7 @@ public class PakistaniRegistration extends BaseTest {
 				acc921.doubleClick(ma41).perform();
 				
 				Thread.sleep(6000);
-				
+				Thread.sleep(7000);
 				  BaseTest.click(driver.findElement(By.xpath("//li[contains(text(),'"+getExcelData("StageRegist", 1, 24)+"')]")));
 				
 			} catch (Exception e2) {
@@ -1184,7 +1187,7 @@ public class PakistaniRegistration extends BaseTest {
   		   
 		if (BaseTest.getExcelData("SMS", 1, 3).equals("2")) {
 			BaseTest.reportflush();
-		    BaseTest.sendVFSmsreg(domain, Error_on, date1);	
+		  //  BaseTest.sendVFSmsreg(domain, Error);	
 		    int a1 = status.getStatus();  
 		    String aa1 = Integer.toString(a1);
  			BaseTest.setExcelData("SMS", 1, 3, aa1);
@@ -1192,7 +1195,7 @@ public class PakistaniRegistration extends BaseTest {
 				
 		} else if (status.getStatus()==2) {
 			 BaseTest.reportflush1();       
-		        BaseTest.sendVFSmsreg1(domain, Error_on, date1, failedstatus);
+		       // BaseTest.sendVFSmsreg1(domain, Error);
 		        int a2 = status.getStatus();
 		        String aa2 = Integer.toString(a2);
 				BaseTest.setExcelData("SMS", 1, 3, aa2);

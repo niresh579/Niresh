@@ -8,8 +8,6 @@ pom\EditPpPOM.class
 pom\DashboardValidationPOM.class
 pom\EditPiPOM.class
 pom\StagingPwaRegistrationPOM.class
-pom\GmailPOM.class
-pom\StagingPiShowExtendedMatchesPOM.class
 pom\RegistrationRaasiPOM.class
 pom\VerifyAgeppPOM.class
 pom\CallPreferencePOM.class

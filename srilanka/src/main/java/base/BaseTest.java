@@ -51,12 +51,14 @@ import com.relevantcodes.extentreports.ExtentTest;
 public class BaseTest {
 	static WebDriver driver;
 	public static ExtentReports report;
+	public static ExtentReports extent;
 	    public static ExtentTest logger;
 	    public static String domain;
 	    public static String error;
 	    public static String expt,ex,exp,e,expti,exptio,status;
 	    String html =  "MyReport.html";
-
+	    public static String currentUrl;
+	    public static String a,b,c,d,e1,f,Clasfiation,fileName_1;
 
 	public static void click(WebElement element) {
 		element.click();
@@ -401,6 +403,248 @@ public class BaseTest {
  	
  }    
 
+ 
+
+ ///////////////////     Mail Base Code               //////////////////////////////
+//   Level 1 Fail  ///
+
+
+
+// Default mail 
+
+public static void reportflush4()
+{
+	report.flush();    	
+final String username = "cbsautomationreport@gmail.com";
+final String password = "cbstest123";
+Date date=new Date();
+
+Properties props = new Properties();
+props.put("mail.smtp.auth", true);
+props.put("mail.smtp.starttls.enable", true);
+props.put("mail.smtp.host", "smtp.gmail.com");
+props.put("mail.smtp.port", "587");
+
+Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+protected PasswordAuthentication getPasswordAuthentication() {
+  return new PasswordAuthentication(username, password);
+}
+});
+Message message = new MimeMessage(session);
+
+try {
+
+message.setFrom(new InternetAddress("cbsautomationreport@gmail.com"));
+
+message.setSubject("[ Global ][ Daily BugZilla Report ] "+date);
+//cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com
+message.setRecipients(Message.RecipientType.TO,
+          InternetAddress.parse("cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+          		//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,,ashokkumar@bharatmatrimony.com,dhanapal@bharatmatrimony.com,kalanithi@bharatmatrimony.com,senthilnath.subramani@matrimony.com,raja.sekar@matrimony.com,kalanithi@bharatmatrimony.com"));
+ //,thanikachalam.thirunanasambandan@matrimony.com                        
+Multipart multipart = new MimeMultipart();
+
+MimeBodyPart messageBodyPart = new MimeBodyPart();
+messageBodyPart.setText(
+		"Hi,"+"\n\n"+
+		 "Please find the list of bug(s) posted in bugzilla for the day from the attachment or from the below URL."+"\n"+
+		"\n"+"Classification: QA Bug track of Global"+"\n"+"\n"+ 
+		 
+		"(1). Global Matrimony - Android App" +"\n"+
+		"(2). Global Matrimony - Portal" +"\n"+
+		"(3). Global Matrimony - PWA" +"\n"+
+		
+		
+		"URL : "+ currentUrl+"\n"+"\n"+ 
+		 
+	
+		 
+ "Regards,"+"\n"+"Global"+"\n"+"CBS Testing Team.");
+	
+
+MimeBodyPart attachmentBodyPart = new MimeBodyPart();       
+// " Level 1 " +"\n" + "Error on : Login Test " + "\n" + "Error Description : " + error + "\n"  + " Reported to : No Response " +"\n" + "Domain Name : " + domain + "\n" + test.getStartedTime() +"" ;
+//CBS Automation Report - Mail for Script Failed With Resson"+"\n"+ "Domain : " +domain+"\n"+"Error on : " +error+ "\n"+ " Error Reason : " + expt + "
+/*String file = "C:\\Users\\CBS\\Downloads\\"+fileName_1;
+String url = currentUrl;
+String fileName = fileName_1;
+DataSource source = new FileDataSource(file);
+DataSource source1 = new FileDataSource(url);
+// messageBodyPart.setDataHandler(new DataHandler(source));
+attachmentBodyPart.setDataHandler(new DataHandler(source));
+attachmentBodyPart.setDataHandler(new DataHandler(source1));
+//  attachmentBodyPart.setText(url);
+attachmentBodyPart.setFileName(fileName_1);*/
+
+//    String file= "C:\\Users\\CBS\\Downloads\\"+fileName_1;
+String file = "E:\\Automation\\Bugzilla\\data\\"+fileName_1;
+
+String fileName = fileName_1;
+DataSource source = new FileDataSource(file);
+//   messageBodyPart.setDataHandler(new DataHandler(source));
+attachmentBodyPart.setDataHandler(new DataHandler(source));
+attachmentBodyPart.setFileName(fileName_1);  
+
+
+	  		      	  		       
+multipart.addBodyPart(messageBodyPart);
+multipart.addBodyPart(attachmentBodyPart);
+
+message.setContent(multipart);
+
+System.out.println("Sending....");
+
+Transport.send(message);
+
+System.out.println("Mail Sent Successfully");
+
+} catch (MessagingException e) {
+e.printStackTrace();
+}      
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+}   
+
+
+public static void reportflush5()
+{
+report.flush();    	
+final String username = "cbsautomationreport@gmail.com";
+final String password = "cbstest123";
+Date date=new Date();
+
+Properties props = new Properties();
+props.put("mail.smtp.auth", true);
+props.put("mail.smtp.starttls.enable", true);
+props.put("mail.smtp.host", "smtp.gmail.com");
+props.put("mail.smtp.port", "587");
+
+Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+protected PasswordAuthentication getPasswordAuthentication() {
+return new PasswordAuthentication(username, password);
+}
+});
+Message message = new MimeMessage(session);
+
+try {
+
+message.setFrom(new InternetAddress("cbsautomationreport@gmail.com"));
+
+message.setSubject("[ Global ][ Daily BugZilla Report ] "+date);
+//cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com
+message.setRecipients(Message.RecipientType.TO,
+      InternetAddress.parse("cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+      		//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,,ashokkumar@bharatmatrimony.com,dhanapal@bharatmatrimony.com,kalanithi@bharatmatrimony.com,senthilnath.subramani@matrimony.com,raja.sekar@matrimony.com,kalanithi@bharatmatrimony.com"));
+//,thanikachalam.thirunanasambandan@matrimony.com                        
+Multipart multipart = new MimeMultipart();
+
+MimeBodyPart messageBodyPart = new MimeBodyPart();
+messageBodyPart.setText(
+	"Hi,"+"\n\n"+
+	  "There is no bug posted for the day."+"\n"+"\n"+
+			
+	  "URL : "+currentUrl+"\n"+"\n"+
+ 		 
+		        			        		 
+	 "Regards,"+"\n"+"Global"+"\n"+"CBS Testing Team.");
+
+
+
+
+multipart.addBodyPart(messageBodyPart);
+//      multipart.addBodyPart(attachmentBodyPart);
+
+message.setContent(multipart);
+
+System.out.println("Sending....");
+
+Transport.send(message);
+
+System.out.println("Mail Sent Successfully");
+
+} catch (MessagingException e) {
+e.printStackTrace();
+}    }  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+public static void reportflush_load()
+{
+report.flush();    	
+final String username = "cbsautomationreport@gmail.com";
+final String password = "cbstest123";
+Date date=new Date();
+
+Properties props = new Properties();
+props.put("mail.smtp.auth", true);
+props.put("mail.smtp.starttls.enable", true);
+props.put("mail.smtp.host", "smtp.gmail.com");
+props.put("mail.smtp.port", "587");
+
+Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+protected PasswordAuthentication getPasswordAuthentication() {
+    return new PasswordAuthentication(username, password);
+}
+});
+Message message = new MimeMessage(session);
+
+try {
+
+message.setFrom(new InternetAddress("cbsautomationreport@gmail.com"));
+
+message.setSubject("[ Global ][ Daily BugZilla Report ] "+date);
+//cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com
+message.setRecipients(Message.RecipientType.TO,
+            InternetAddress.parse("cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+//cbstesting@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com
+            		//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,ashokkumar@bharatmatrimony.com,visvesvarryya.neelakantan@matrimony.com"));
+//,amudhan.nagarajan@matrimony.com,thanikachalam.thirunanasambandan@matrimony.com,,ashokkumar@bharatmatrimony.com,dhanapal@bharatmatrimony.com,kalanithi@bharatmatrimony.com,senthilnath.subramani@matrimony.com,raja.sekar@matrimony.com,kalanithi@bharatmatrimony.com"));
+   //,thanikachalam.thirunanasambandan@matrimony.com                        
+Multipart multipart = new MimeMultipart();
+
+MimeBodyPart messageBodyPart = new MimeBodyPart();
+messageBodyPart.setText(
+		"Hi,"+"\n\n"+
+		  "Sorry!!!, We are not able to connect with the server to get Daily Bug Report."+"\n"+"\n"+
+			 
+ "Regards,"+"\n"+"Global"+"\n"+"CBS Testing Team.");
+	
+
+
+
+multipart.addBodyPart(messageBodyPart);
+//      multipart.addBodyPart(attachmentBodyPart);
+
+message.setContent(multipart);
+
+System.out.println("Sending....");
+
+Transport.send(message);
+
+System.out.println("Mail Sent Successfully");
+
+} catch (MessagingException e) {
+e.printStackTrace();
+}      
+
+
+
+
+}   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  @BeforeSuite
 	public void htmlReport() {
 		

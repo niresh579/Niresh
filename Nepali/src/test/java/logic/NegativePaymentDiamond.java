@@ -20,7 +20,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import pom.BaseTest;
 import pom.NegativePaymentPOM;
-
+ 
+ 
 
 public class NegativePaymentDiamond extends BaseTest{
 	
